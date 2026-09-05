@@ -1,6 +1,23 @@
-{
-  "imageFeed": "posts/instant/launch-feed.jpg",
-  "imageSquare": "posts/instant/launch-gbp.jpg",
-  "social": "Washed by hand. Never by machine.\n\nHigh-pressure rinse, hand dry, glass polish, rims cleaned inside and out. Every panel is touched by hand — never a harsh automatic tunnel.\n\nMody Exterior: safe cleaners that enhance paint shine, manual scratch-free drying, and glass cleaned and polished.\n\n✅ Ultra-filtered water, so it dries without mineral spots\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#TempleHillsMD #PGCounty #OxonHill #CampSprings #HandCarWash #CarWash #AutoDetailing #CarCare #ExteriorDetailing #ScratchFree #ModyCarWash",
-  "gbp": "Washed by hand. Never by machine.\n\nHigh-pressure rinse, hand dry, glass polish, rims cleaned inside and out. Every panel is touched by hand — never a harsh automatic tunnel.\n\nMody Exterior: safe cleaners that enhance paint shine, manual scratch-free drying, and glass cleaned and polished. Ultra-filtered water means no mineral spots when it dries.\n\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill and Suitland."
-}
+[
+  {
+    "id": "exterior",
+    "imageFeed": "posts/instant/exterior-feed.jpg",
+    "imageSquare": "posts/instant/exterior-gbp.jpg",
+    "social": "Washed by hand. Never by machine.\n\nHigh-pressure rinse, hand dry, glass polish, rims cleaned inside and out. Every panel is touched by hand — never a harsh automatic tunnel.\n\nMody Exterior: safe cleaners that enhance paint shine, manual scratch-free drying, glass cleaned and polished.\n\n✅ Ultra-filtered water, so your car dries without mineral spots\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#TempleHillsMD #PGCounty #OxonHill #CampSprings #HandCarWash #CarWash #AutoDetailing #CarCare #ExteriorDetailing #ScratchFree #ModyCarWash",
+    "gbp": "Washed by hand. Never by machine.\n\nHigh-pressure rinse, hand dry, glass polish, rims cleaned inside and out. Every panel is touched by hand — never a harsh automatic tunnel.\n\nMody Exterior: safe cleaners that enhance paint shine, manual scratch-free drying, glass cleaned and polished. Ultra-filtered water means no mineral spots when it dries.\n\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill and Suitland."
+  },
+  {
+    "id": "interior",
+    "imageFeed": "posts/instant/interior-feed.jpg",
+    "imageSquare": "posts/instant/interior-gbp.jpg",
+    "social": "Stains don't stand a chance.\n\nDeep vacuum for cabin and trunk, dashboard polish, carpet wash — plus steam stain removal for spills the last owner gave up on.\n\nMody Interior: dust and grime pulled out of every seam, floor mats washed, trim wiped down. The seats your family actually sits in, properly clean.\n\n✅ 100% hand washed, never an automatic tunnel\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#TempleHillsMD #Suitland #PGCounty #OxonHill #InteriorDetailing #CarDetailing #DeepClean #StainRemoval #CarCare #CleanCar #ModyCarWash",
+    "gbp": "Stains don't stand a chance.\n\nDeep vacuum for cabin and trunk, dashboard polish, carpet wash, plus steam stain removal for upholstery and spills.\n\nMody Interior: dust and grime pulled out of every seam, floor mats washed, trim wiped down. Interior detailing that resets your daily drive.\n\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill and Suitland."
+  },
+  {
+    "id": "tint",
+    "imageFeed": "posts/instant/tint-feed.jpg",
+    "imageSquare": "posts/instant/tint-gbp.jpg",
+    "social": "Clean glass, zero haze.\n\nOld tint turning purple, bubbling or peeling? We remove it with precise tools — scratch-free, every trace of adhesive cleaned off, glass restored to factory condition.\n\nYour rear defroster lines stay protected during removal. No haze, no sticky film, no damage.\n\n✅ Specialized tint removal, done right the first time\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#TempleHillsMD #PGCounty #CampSprings #TintRemoval #WindowTint #AutoGlass #ClearGlass #CarCare #AutoDetailing #CarDetailing #ModyCarWash",
+    "gbp": "Clean glass, zero haze.\n\nOld tint turning purple, bubbling or peeling? We remove it with precise tools — scratch-free, every trace of adhesive cleaned off, glass restored to factory condition. Rear defroster lines stay protected throughout.\n\nSpecialized window tint removal, done right the first time.\n\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill and Suitland."
+  }
+]
