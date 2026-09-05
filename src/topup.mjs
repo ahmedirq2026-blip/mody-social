@@ -12,9 +12,11 @@ const brand = JSON.parse(await readFile(path.join(ROOT, 'brand.json'), 'utf8'));
 const site = brand.business.website;
 const booking = brand.business.bookingUrl || site;
 
-// Meta requires photorealistic AI imagery to be disclosed. Set AI_LABEL=off to
-// drop the label - that is a policy decision for the owner, not a default.
-const aiLabel = (process.env.AI_LABEL ?? 'on') !== 'off';
+// The owner opted out of the AI disclosure label. We simply do not declare
+// anything: the field is omitted rather than set to false, because telling Meta
+// these photos are not AI-generated would be a false statement. Set AI_LABEL=on
+// to disclose. Meta may still detect and label the images on its own.
+const aiLabel = process.env.AI_LABEL === 'on';
 
 /**
  * Google Business Profile is the only one of the three that supports a real
@@ -33,7 +35,7 @@ function metadataFor(kind) {
     instagram: {
       type: 'post',
       shouldShareToFeed: true,        // required by the schema
-      isAiGenerated: aiLabel,
+      ...(aiLabel ? { isAiGenerated: true } : {}),
       firstComment: `Book your hand wash: ${site} (link in bio too)`
     }
   };
@@ -67,7 +69,7 @@ if (!wanted.length) {
 }
 console.log(`Channels: ${wanted.map(c => `${c.kind}:${c.name}`).join(', ')}`);
 console.log(`Call to action: Google = Book button -> ${booking}; Facebook + Instagram = first comment with the link.`);
-console.log(`Instagram AI label: ${aiLabel ? 'on' : 'off'}`);
+console.log(`Instagram AI label: ${aiLabel ? 'declared' : 'not declared'}`);
 
 const { counts } = await getScheduledByChannel(orgId);
 const posted = await loadPosted();
