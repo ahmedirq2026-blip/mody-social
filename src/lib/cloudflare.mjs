@@ -26,14 +26,14 @@ export const VARIATIONS = [
 ];
 
 /** Returns a base64-encoded JPEG string. */
-export async function generateImage(prompt, { steps = 8, retries = 4, variation = 0 } = {}) {
+export async function generateImage(prompt, { steps = 8, retries = 7, variation = 0 } = {}) {
   const finalPrompt = prompt + (VARIATIONS[variation % VARIATIONS.length] || '');
   const { accountId, token } = cfConfig();
   const url = `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/${MODEL}`;
 
   let lastErr;
   for (let attempt = 0; attempt <= retries; attempt++) {
-    if (attempt) await sleep(Math.min(30000, 2000 * 2 ** (attempt - 1)));
+    if (attempt) await sleep(Math.min(120000, 3000 * 2 ** (attempt - 1)));
     try {
       const res = await fetch(url, {
         method: 'POST',
@@ -42,6 +42,9 @@ export async function generateImage(prompt, { steps = 8, retries = 4, variation 
       });
 
       if (res.status === 429 || res.status >= 500) {
+        // Workers AI bursts are throttled; wait as long as the server asks.
+        const retryAfter = Number(res.headers.get('Retry-After'));
+        if (Number.isFinite(retryAfter) && retryAfter > 0) await sleep(Math.min(180000, retryAfter * 1000));
         lastErr = new Error(`Cloudflare ${res.status}`);
         continue;
       }

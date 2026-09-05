@@ -16,6 +16,7 @@ import { ROOT, POSTS, loadHistory, saveHistory, loadPlan, savePlan } from './lib
 const HASH_MIN_DISTANCE = 12;   // below this two photos are "too similar"
 const MAX_IMAGE_ATTEMPTS = 4;
 const MAX_COMBO_ATTEMPTS = 12;
+const PACE_MS = Number(process.env.PACE_MS || 2500);   // stay under the Workers AI burst limit
 
 const force = process.argv.includes('--force');
 const limitArg = process.argv.find(a => a.startsWith('--limit='));
@@ -26,11 +27,15 @@ const brand = JSON.parse(await readFile(path.join(ROOT, 'brand.json'), 'utf8'));
 const { year, month, key: monthKey } = targetMonth();
 
 const existing = await loadPlan(monthKey);
-if (existing && !force) {
-  console.error(`A plan for ${monthKey} already exists (${existing.posts.length} posts).`);
+const complete = existing && existing.posts.length >= monthSlots(year, month).length;
+if (complete && !force) {
+  console.error(`A complete plan for ${monthKey} already exists (${existing.posts.length} posts).`);
   console.error('Re-running would replace it. Pass --force if that is what you want.');
   process.exit(1);
 }
+// A partial plan means a previous run was interrupted - carry on from there.
+const done = force ? new Map() : new Map((existing?.posts ?? []).map(p => [p.day, p]));
+if (done.size) console.log(`Resuming: ${done.size} post(s) already rendered.`);
 
 const history = await loadHistory();
 const slots = monthSlots(year, month);
@@ -70,8 +75,8 @@ if (dry) {
 const outDir = path.join(POSTS, monthKey);
 await mkdir(outDir, { recursive: true });
 
-const results = [];
-const toRender = planned.slice(0, limit);
+const results = [...done.values()];
+const toRender = planned.filter(p => !done.has(p.day)).slice(0, limit);
 await withBrowser(async (page) => {
   for (const post of toRender) {
     const dayId = String(post.day).padStart(2, '0');
@@ -123,6 +128,14 @@ await withBrowser(async (page) => {
     });
 
     console.log(`  ${post.localLabel}  ${post.serviceId.padEnd(9)} ${post.layout.padEnd(6)} "${post.copy.headline.join(' ')}"${attempts > 1 ? `  (${attempts} tries)` : ''}`);
+
+    // checkpoint: a 429 on day 26 must not throw away days 1-25
+    results.sort((a, b) => a.day - b.day);
+    await savePlan(monthKey, { month: monthKey, timezone: 'America/New_York', postTime: '10:00',
+      generatedAt: new Date().toISOString(), posts: results });
+    await saveHistory(history);
+
+    await new Promise(r => setTimeout(r, PACE_MS));
   }
 });
 
@@ -132,7 +145,7 @@ const plan = {
   timezone: 'America/New_York',
   postTime: '10:00',
   generatedAt: new Date().toISOString(),
-  posts: results
+  posts: results.sort((a, b) => a.day - b.day)
 };
 await savePlan(monthKey, plan);
 await saveHistory(history);
