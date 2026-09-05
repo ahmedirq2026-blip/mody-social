@@ -46,10 +46,10 @@ export const SERVICE_SCENES = {
     'a close-up of a hand cleaning an alloy wheel with a soft brush, foam on the rim, tire glistening'
   ],
   interior: [
-    'a detailer vacuuming a spotless fabric car seat with a professional extractor nozzle, immaculate cabin',
-    'gloved hands wiping a dashboard with a microfiber cloth, dust-free vents, clean windshield behind',
-    'a close-up of clean floor carpets being brushed, fresh fibers, tidy footwell',
-    'an immaculate cabin interior shot through the open door, clean seats, polished trim, sunlight on the upholstery'
+    'photographed from inside the car cabin: a detailer vacuuming a spotless fabric seat with a professional extractor nozzle, seats and centre console clearly visible',
+    'interior cabin view: gloved hands wiping the dashboard and air vents with a microfiber cloth, steering wheel and console in frame',
+    'inside the footwell: clean floor carpets being brushed, fresh fibers, pedals and door sill visible',
+    'the full car interior seen through the open front door: immaculate seats, polished trim, clean carpets, sunlight falling on the upholstery'
   ],
   tint: [
     'hands carefully peeling dark old window film off the rear glass with a plastic blade, film curling away cleanly',
@@ -77,10 +77,10 @@ const HARD_NEGATIVES =
 
 export function buildImagePrompt(c) {
   return [
-    'Professional commercial automotive photography.',
+    'Clean unbranded commercial automotive photography with absolutely no text anywhere in the frame.',
     `${c.scene}.`,
-    `The vehicle is a ${c.color} ${c.vehicle}, generic and unbranded.`,
-    `Location: ${c.setting}.`,
+    `The vehicle is a ${c.color} ${c.vehicle} with smooth blank body panels, no emblem, no badge, no lettering, no license plate.`,
+    `Location: ${c.setting}. Nothing in the background carries writing, signage or labels.`,
     `Lighting: ${c.lighting}.`,
     `Camera: ${c.angle}.`,
     'Ultra photorealistic, sharp focus, high detail, clean composition,',

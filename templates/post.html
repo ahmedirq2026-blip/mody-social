@@ -14,13 +14,15 @@ html,body{background:var(--deep)}
 body{font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 
 #canvas{position:relative;overflow:hidden;background:var(--deep)}
+.topfade{position:absolute;left:0;right:0;top:0;height:20%;pointer-events:none;
+  background:linear-gradient(180deg,rgba(0,52,74,.66) 0%,rgba(0,52,74,.34) 45%,rgba(0,52,74,0) 100%)}
 
 /* ---------- photo ---------- */
 .photo{position:absolute;inset:0;overflow:hidden}
 .photo img{width:100%;height:100%;object-fit:cover;display:block;
   filter:saturate(1.07) contrast(1.05) brightness(1.02)}
 .photo::after{content:'';position:absolute;inset:0;
-  background:linear-gradient(160deg,rgba(0,204,249,.10),rgba(0,68,140,.16))}
+  background:linear-gradient(160deg,rgba(0,204,249,.05),rgba(0,68,140,.09))}
 
 /* ---------- shared type ---------- */
 .kicker{font-weight:800;font-size:var(--kicker);letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}
@@ -37,12 +39,15 @@ body{font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialias
   padding:.5em 1em;border-radius:999px;backdrop-filter:blur(14px)}
 .chip .dot{width:.5em;height:.5em;border-radius:50%;background:var(--cyan)}
 
+.badge{background:rgba(0,52,74,.46);border:1px solid rgba(255,255,255,.20);
+  backdrop-filter:blur(18px) saturate(1.2);border-radius:999px;
+  padding:calc(var(--gap)*.28) calc(var(--gap)*.9) calc(var(--gap)*.28) calc(var(--gap)*.28)}
 .logo{width:var(--logo);height:var(--logo);border-radius:50%;object-fit:cover;
   box-shadow:0 10px 34px rgba(0,0,0,.34),0 0 0 4px rgba(255,255,255,.92)}
 .wordmark{display:flex;flex-direction:column;line-height:1}
-.wordmark b{font-weight:800;font-size:var(--wm);letter-spacing:-.02em;color:#fff}
+.wordmark b{font-weight:800;font-size:var(--wm);letter-spacing:-.02em;color:#fff;text-shadow:0 2px 12px rgba(0,26,38,.55)}
 .wordmark span{font-weight:700;font-size:calc(var(--wm)*.46);letter-spacing:.22em;
-  text-transform:uppercase;color:var(--cyan);margin-top:.35em}
+  text-transform:uppercase;color:var(--cyan);margin-top:.35em;text-shadow:0 2px 10px rgba(0,26,38,.6)}
 
 /* ---------- footer bar ---------- */
 .footer{display:flex;align-items:center;gap:var(--gap);font-weight:700;
@@ -84,6 +89,7 @@ body{font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialias
 
 <div id="canvas">
   <div class="photo"><img id="bg" alt=""></div>
+  <div class="topfade"></div>
   <div class="veil"></div>
 
   <div class="badge">

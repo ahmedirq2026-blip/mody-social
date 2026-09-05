@@ -6,6 +6,7 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { generateImage } from './lib/cloudflare.mjs';
+import { hasVisibleText, guardStatus } from './lib/guard.mjs';
 import { withBrowser, renderPost, photoHash, hammingDistance, SIZES } from './lib/render.mjs';
 import { buildPost, serviceSequence } from './lib/compose.mjs';
 import { monthSlots, targetMonth } from './lib/schedule.mjs';
@@ -75,9 +76,16 @@ await withBrowser(async (page) => {
 
     for (let a = 0; a < MAX_IMAGE_ATTEMPTS; a++) {
       attempts = a + 1;
-      const seed = (post.seed + a * 7919) % 4294967295;
-      const b64 = await generateImage(post.prompt, seed);
+      const b64 = await generateImage(post.prompt, { variation: a });
       const h = await photoHash(page, b64);
+
+      const text = await hasVisibleText(b64);
+      if (text.checked && text.hasText && a < MAX_IMAGE_ATTEMPTS - 1) {
+        console.log(`  day ${dayId}: the model rendered lettering into the photo, regenerating`);
+        imageB64 = b64; hash = h;
+        continue;
+      }
+
       const clash = history.hashes.find(prev => hammingDistance(prev.hash, h) < HASH_MIN_DISTANCE);
       if (!clash) { imageB64 = b64; hash = h; break; }
       console.log(`  day ${dayId}: too similar to ${clash.ref} (distance ${hammingDistance(clash.hash, h)}), regenerating`);
@@ -127,7 +135,7 @@ await savePlan(monthKey, plan);
 await saveHistory(history);
 await writeContactSheet(monthKey, plan);
 
-console.log(`\nDone. ${results.length} posts ready in posts/${monthKey}/`);
+console.log(`\nDone. ${results.length} posts ready in posts/${monthKey}/  (text guard: ${guardStatus()})`);
 console.log(`Review them at posts/${monthKey}/index.html before the daily top-up starts.`);
 
 async function writeContactSheet(monthKey, plan) {

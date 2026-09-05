@@ -14,8 +14,20 @@ export function cfConfig() {
   return { accountId, token };
 }
 
+// The live model accepts ONLY { prompt, steps } - no seed, no width/height and no
+// negative_prompt (verified against the API, the docs page is out of date).
+// Output is a fixed 1024x1024 JPEG; the design templates crop it to shape.
+// Variation therefore comes from the prompt matrix, and retries nudge the wording.
+export const VARIATIONS = [
+  '',
+  ' Slightly different framing and composition.',
+  ' Alternative angle, different arrangement of the elements.',
+  ' A different moment of the same scene, fresh composition.'
+];
+
 /** Returns a base64-encoded JPEG string. */
-export async function generateImage(prompt, seed, { steps = 8, retries = 4 } = {}) {
+export async function generateImage(prompt, { steps = 8, retries = 4, variation = 0 } = {}) {
+  const finalPrompt = prompt + (VARIATIONS[variation % VARIATIONS.length] || '');
   const { accountId, token } = cfConfig();
   const url = `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/${MODEL}`;
 
@@ -26,7 +38,7 @@ export async function generateImage(prompt, seed, { steps = 8, retries = 4 } = {
       const res = await fetch(url, {
         method: 'POST',
         headers: { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt: prompt.slice(0, 2048), steps, seed })
+        body: JSON.stringify({ prompt: finalPrompt.slice(0, 2048), steps })
       });
 
       if (res.status === 429 || res.status >= 500) {

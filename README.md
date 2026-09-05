@@ -58,6 +58,7 @@ https://<حسابك>.github.io/<المستودع>/posts/YYYY-MM/index.html
 | منع التكرار | مصفوفة 153,600 تركيبة + بصمة pHash | `data/history.json` يمنع أي إعادة استخدام |
 | التصميم والكتابة | Chromium + HTML/CSS | النص **لا يُولّد** بالذكاء الاصطناعي — يُطبع بخط Manrope وألوان الهوية |
 | الاستضافة | GitHub Pages | Buffer يسحب الصورة من الرابط لحظة النشر، فلازم يبقى حي |
+| حارس الحروف | Llama 3.2 Vision على Cloudflare | يفحص كل صورة ويرفضها إذا الموديل رسم حروف مشوّهة، ويعيد التوليد تلقائياً |
 | الجدولة | Buffer GraphQL API | `mode: customScheduled` بتوقيت UTC محسوب من 10:00 ET مع التوقيت الصيفي |
 
 ثلاثة تخطيطات تتناوب: `panel` / `scrim` / `glass`.
