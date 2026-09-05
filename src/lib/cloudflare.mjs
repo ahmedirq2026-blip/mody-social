@@ -3,6 +3,13 @@
 
 const MODEL = '@cf/black-forest-labs/flux-1-schnell';
 
+export class DailyQuotaExhausted extends Error {
+  constructor() {
+    super('Cloudflare daily free allocation (10,000 neurons) is used up. It resets at 00:00 UTC.');
+    this.name = 'DailyQuotaExhausted';
+  }
+}
+
 const sleep = (ms) => new Promise(r => setTimeout(r, ms));
 
 export function cfConfig() {
@@ -26,7 +33,7 @@ export const VARIATIONS = [
 ];
 
 /** Returns a base64-encoded JPEG string. */
-export async function generateImage(prompt, { steps = 8, retries = 7, variation = 0 } = {}) {
+export async function generateImage(prompt, { steps = 4, retries = 7, variation = 0 } = {}) {
   const finalPrompt = prompt + (VARIATIONS[variation % VARIATIONS.length] || '');
   const { accountId, token } = cfConfig();
   const url = `https://api.cloudflare.com/client/v4/accounts/${accountId}/ai/run/${MODEL}`;
@@ -41,6 +48,11 @@ export async function generateImage(prompt, { steps = 8, retries = 7, variation 
         body: JSON.stringify({ prompt: finalPrompt.slice(0, 2048), steps })
       });
 
+      if (res.status === 429) {
+        const body = await res.clone().json().catch(() => null);
+        const msg = body?.errors?.[0]?.message ?? '';
+        if (/daily free allocation|free allocation of/i.test(msg)) throw new DailyQuotaExhausted();
+      }
       if (res.status === 429 || res.status >= 500) {
         // Workers AI bursts are throttled; wait as long as the server asks.
         const retryAfter = Number(res.headers.get('Retry-After'));

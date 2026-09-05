@@ -5,7 +5,7 @@
 
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
-import { generateImage } from './lib/cloudflare.mjs';
+import { generateImage, DailyQuotaExhausted } from './lib/cloudflare.mjs';
 import { hasVisibleText, guardStatus } from './lib/guard.mjs';
 import { withBrowser, renderPost, photoHash, hammingDistance, SIZES } from './lib/render.mjs';
 import { buildPost, serviceSequence } from './lib/compose.mjs';
@@ -14,9 +14,10 @@ import { mulberry32, hashString } from './lib/random.mjs';
 import { ROOT, POSTS, loadHistory, saveHistory, loadPlan, savePlan } from './lib/store.mjs';
 
 const HASH_MIN_DISTANCE = 12;   // below this two photos are "too similar"
-const MAX_IMAGE_ATTEMPTS = 4;
+const MAX_IMAGE_ATTEMPTS = 3;
 const MAX_COMBO_ATTEMPTS = 12;
 const PACE_MS = Number(process.env.PACE_MS || 2500);   // stay under the Workers AI burst limit
+const DAILY_NOTE = 'The Cloudflare free tier gives 10,000 neurons a day, which resets at 00:00 UTC.';
 
 const force = process.argv.includes('--force');
 const limitArg = process.argv.find(a => a.startsWith('--limit='));
@@ -75,16 +76,24 @@ if (dry) {
 const outDir = path.join(POSTS, monthKey);
 await mkdir(outDir, { recursive: true });
 
+let quotaHit = false;
 const results = [...done.values()];
 const toRender = planned.filter(p => !done.has(p.day)).slice(0, limit);
 await withBrowser(async (page) => {
   for (const post of toRender) {
+    if (quotaHit) break;
     const dayId = String(post.day).padStart(2, '0');
     let imageB64 = null, hash = null, attempts = 0;
 
     for (let a = 0; a < MAX_IMAGE_ATTEMPTS; a++) {
       attempts = a + 1;
-      const b64 = await generateImage(post.prompt, { variation: a });
+      let b64;
+      try {
+        b64 = await generateImage(post.prompt, { variation: a });
+      } catch (err) {
+        if (err instanceof DailyQuotaExhausted) { quotaHit = true; break; }
+        throw err;
+      }
       const h = await photoHash(page, b64);
 
       const text = await hasVisibleText(b64);
@@ -99,6 +108,8 @@ await withBrowser(async (page) => {
       console.log(`  day ${dayId}: too similar to ${clash.ref} (distance ${hammingDistance(clash.hash, h)}), regenerating`);
       imageB64 = b64; hash = h;   // keep the last attempt rather than failing the run
     }
+
+    if (quotaHit || !imageB64) break;
 
     const feed = await renderPost(page, { imageB64, layout: post.layout, size: SIZES.feed, copy: post.copy });
     const square = await renderPost(page, { imageB64, layout: post.layout, size: SIZES.square, copy: post.copy });
@@ -151,7 +162,13 @@ await savePlan(monthKey, plan);
 await saveHistory(history);
 await writeContactSheet(monthKey, plan);
 
-console.log(`\nDone. ${results.length} posts ready in posts/${monthKey}/  (text guard: ${guardStatus()})`);
+const total = slots.length;
+if (quotaHit) {
+  console.log(`\nStopped early: ${results.length}/${total} posts done. ${DAILY_NOTE}`);
+  console.log('Everything rendered so far is saved. Run the workflow again and it resumes from here.');
+} else {
+  console.log(`\nDone. ${results.length}/${total} posts ready in posts/${monthKey}/  (text guard: ${guardStatus()})`);
+}
 console.log(`Review them at posts/${monthKey}/index.html before the daily top-up starts.`);
 
 async function writeContactSheet(monthKey, plan) {
