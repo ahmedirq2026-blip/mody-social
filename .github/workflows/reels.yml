@@ -1,0 +1,69 @@
+name: Generate Monthly Reels
+
+on:
+  # runs after the image pass, once the Cloudflare allowance has reset
+  schedule:
+    - cron: '40 1 * * *'
+  workflow_dispatch:
+    inputs:
+      month:
+        description: 'Month to build reels for (YYYY-MM). Empty = current or next.'
+        required: false
+        type: string
+      force:
+        description: 'Rebuild reels that already exist'
+        required: false
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mody-reels
+  cancel-in-progress: false
+
+jobs:
+  reels:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Cache Playwright browsers
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/ms-playwright
+          key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      - run: npx playwright install --with-deps chromium
+      - name: Check ffmpeg
+        run: ffmpeg -version | head -1
+
+      - name: Build the reels
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          MONTH: ${{ inputs.month }}
+          REEL_HOUR: ${{ vars.REEL_HOUR || 20 }}
+        run: node src/reels.mjs ${{ inputs.force && '--force' || '' }}
+
+      - name: Drop media that has already published
+        if: always()
+        run: node scripts/cleanup.mjs
+
+      - name: Commit
+        if: always()
+        run: |
+          git config user.name  "mody-social bot"
+          git config user.email "actions@github.com"
+          git add posts data
+          if git diff --staged --quiet; then
+            echo "Nothing new to commit."
+          else
+            git commit -m "content: build reels"
+            git push
+          fi

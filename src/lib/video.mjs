@@ -65,7 +65,8 @@ export async function renderReel(page, { photoB64, copy, brand, musicFile, outPa
     headline: copy.headline,
     sub: copy.sub,
     cta: copy.cta,
-    footer: copy.footer
+    // the address lives in the caption; the reel keeps the footer to one line
+    footer: copy.footer.slice(1)
   };
 
   const html = tpl

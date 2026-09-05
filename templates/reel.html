@@ -12,12 +12,12 @@ body{font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialias
 .photo img{width:100%;height:100%;object-fit:cover;display:block;transform-origin:50% 45%;
   filter:saturate(1.07) contrast(1.05) brightness(1.02)}
 .tint{position:absolute;inset:0;background:linear-gradient(160deg,rgba(0,204,249,.05),rgba(0,68,140,.09))}
-.topfade{position:absolute;left:0;right:0;top:0;height:22%;
+.topfade{position:absolute;left:0;right:0;top:0;height:28%;
   background:linear-gradient(180deg,rgba(0,52,74,.70),rgba(0,52,74,0))}
-.botfade{position:absolute;left:0;right:0;bottom:0;height:62%;
-  background:linear-gradient(180deg,rgba(0,52,74,0),rgba(0,52,74,.72) 42%,rgba(0,52,74,.97))}
+.botfade{position:absolute;left:0;right:0;bottom:0;height:70%;
+  background:linear-gradient(180deg,rgba(0,52,74,0),rgba(0,52,74,.70) 38%,rgba(0,52,74,.95) 72%,rgba(0,52,74,.98))}
 
-.badge{position:absolute;top:96px;left:80px;display:flex;align-items:center;gap:22px;
+.badge{position:absolute;top:210px;left:80px;display:flex;align-items:center;gap:22px;
   background:rgba(0,52,74,.46);border:1px solid rgba(255,255,255,.20);
   backdrop-filter:blur(18px) saturate(1.2);border-radius:999px;padding:14px 34px 14px 14px}
 .badge img{width:112px;height:112px;border-radius:50%;object-fit:cover;
@@ -27,23 +27,23 @@ body{font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialias
 .wm span{font-weight:700;font-size:17px;letter-spacing:.22em;text-transform:uppercase;
   color:var(--cyan);margin-top:8px;text-shadow:0 2px 10px rgba(0,26,38,.6)}
 
-.chip{position:absolute;top:118px;right:80px;display:inline-flex;align-items:center;gap:12px;
+.chip{position:absolute;top:232px;right:240px;display:inline-flex;align-items:center;gap:12px;
   font-weight:800;font-size:26px;color:#fff;background:rgba(255,255,255,.14);
   border:1px solid rgba(255,255,255,.26);padding:16px 30px;border-radius:999px;backdrop-filter:blur(14px)}
 .chip i{width:12px;height:12px;border-radius:50%;background:var(--cyan);display:block}
 
-.stack{position:absolute;left:80px;right:80px;bottom:150px;display:flex;flex-direction:column;gap:30px}
+.stack{position:absolute;left:80px;right:230px;bottom:440px;display:flex;flex-direction:column;gap:26px}
 .rule{height:8px;width:150px;border-radius:99px;background:var(--cyan)}
 .eyebrow{font-weight:800;font-size:28px;letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}
-.h1,.h2{font-weight:800;font-size:112px;line-height:.98;letter-spacing:-.035em;color:#fff}
+.h1,.h2{font-weight:800;font-size:96px;line-height:.98;letter-spacing:-.035em;color:#fff}
 .h2{color:var(--cyan)}
-.sub{font-weight:500;font-size:38px;line-height:1.32;color:rgba(255,255,255,.82);max-width:92%}
+.sub{font-weight:500;font-size:35px;line-height:1.32;color:rgba(255,255,255,.82);max-width:92%}
 .cta{align-self:flex-start;display:inline-flex;align-items:center;gap:14px;background:var(--cyan);
   color:var(--deep);font-weight:800;font-size:36px;padding:26px 46px;border-radius:999px;
   box-shadow:0 16px 44px rgba(0,204,249,.30)}
 .cta svg{width:34px;height:34px}
-.foot{display:flex;align-items:center;gap:22px;font-weight:700;font-size:25px;
-  letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.74)}
+.foot{display:flex;align-items:center;flex-wrap:wrap;gap:10px 18px;font-weight:700;font-size:22px;
+  letter-spacing:.05em;text-transform:uppercase;color:rgba(255,255,255,.74);max-width:96%}
 .foot i{width:6px;height:6px;border-radius:50%;background:var(--cyan);flex:none;display:block}
 </style>
 
