@@ -95,7 +95,7 @@ export async function getScheduledByChannel(organizationId) {
   throw new Error('Could not read scheduled posts from Buffer (schema mismatch). Run: npm run doctor');
 }
 
-export async function createImagePost({ channelId, text, imageUrl, dueAt }) {
+export async function createImagePost({ channelId, text, imageUrl, dueAt, metadata }) {
   const { data } = await gql(
     `mutation CreatePost($input: CreatePostInput!) {
        createPost(input: $input) {
@@ -110,7 +110,8 @@ export async function createImagePost({ channelId, text, imageUrl, dueAt }) {
         schedulingType: 'automatic',
         mode: 'customScheduled',
         dueAt,
-        assets: [{ image: { url: imageUrl } }]
+        assets: [{ image: { url: imageUrl } }],
+        ...(metadata ? { metadata } : {})
       }
     }
   );

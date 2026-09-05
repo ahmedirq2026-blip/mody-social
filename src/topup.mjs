@@ -4,7 +4,40 @@
 // stays safely under Buffer's free-plan cap of 10 queued posts per channel.
 
 import { getOrganizationId, getChannels, getScheduledByChannel, createImagePost, classifyChannel } from './lib/buffer.mjs';
-import { listPlans, loadPlan, loadPosted, savePosted, imageUrl, pagesBaseUrl } from './lib/store.mjs';
+import { listPlans, loadPlan, loadPosted, savePosted, imageUrl, pagesBaseUrl, ROOT } from './lib/store.mjs';
+import { readFile } from 'node:fs/promises';
+import path from 'node:path';
+
+const brand = JSON.parse(await readFile(path.join(ROOT, 'brand.json'), 'utf8'));
+const site = brand.business.website;
+const booking = brand.business.bookingUrl || site;
+
+// Meta requires photorealistic AI imagery to be disclosed. Set AI_LABEL=off to
+// drop the label - that is a policy decision for the owner, not a default.
+const aiLabel = (process.env.AI_LABEL ?? 'on') !== 'off';
+
+/**
+ * Google Business Profile is the only one of the three that supports a real
+ * button. Facebook makes URLs in the caption clickable and allows an automatic
+ * first comment. Instagram feed posts cannot carry a link at all, so the link
+ * goes in the first comment and the profile bio.
+ */
+function metadataFor(kind) {
+  if (kind === 'google') {
+    return { google: { type: 'whats_new', detailsWhatsNew: { button: 'book', link: booking } } };
+  }
+  if (kind === 'facebook') {
+    return { facebook: { type: 'post', firstComment: `Book your hand wash here: ${booking}` } };
+  }
+  return {
+    instagram: {
+      type: 'post',
+      shouldShareToFeed: true,        // required by the schema
+      isAiGenerated: aiLabel,
+      firstComment: `Book your hand wash: ${site} (link in bio too)`
+    }
+  };
+}
 
 const TARGET_QUEUE = Number(process.env.TARGET_QUEUE || 7);
 const HARD_CAP = Number(process.env.QUEUE_HARD_CAP || 10);
@@ -33,6 +66,8 @@ if (!wanted.length) {
   process.exit(1);
 }
 console.log(`Channels: ${wanted.map(c => `${c.kind}:${c.name}`).join(', ')}`);
+console.log(`Call to action: Google = Book button -> ${booking}; Facebook + Instagram = first comment with the link.`);
+console.log(`Instagram AI label: ${aiLabel ? 'on' : 'off'}`);
 
 const { counts } = await getScheduledByChannel(orgId);
 const posted = await loadPosted();
@@ -77,7 +112,10 @@ for (const channel of wanted) {
 
     if (dry) { console.log(`  [dry] ${p.localLabel} -> ${url}`); continue; }
 
-    const post = await createImagePost({ channelId: channel.id, text, imageUrl: url, dueAt: p.dueAt });
+    const post = await createImagePost({
+      channelId: channel.id, text, imageUrl: url, dueAt: p.dueAt,
+      metadata: metadataFor(channel.kind)
+    });
     posted[channel.id] = posted[channel.id] ?? {};
     posted[channel.id][`${p.monthKey}#${p.day}`] = { postId: post.id, dueAt: p.dueAt, at: new Date().toISOString() };
     created++;
