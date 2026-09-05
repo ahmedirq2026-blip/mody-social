@@ -8,8 +8,10 @@
 
 const MODEL = '@cf/meta/llama-3.2-11b-vision-instruct';
 const QUESTION =
-  'Look carefully at this advertising photo. Does it contain ANY visible written ' +
-  'text, letters, words, numbers, logos or badges anywhere in the image? ' +
+  'Look at this advertising photo. Is there any clearly legible writing that a ' +
+  'viewer would read - words, a brand name, a sign, or garbled letters printed ' +
+  'across the car body, a wall or a banner? Ignore tiny incidental details such ' +
+  'as tyre sidewall texture, wheel centre caps and small dashboard markings. ' +
   'Answer with exactly one word: YES or NO.';
 
 let available = null;   // null = unknown, false = licence not accepted
@@ -53,8 +55,10 @@ export async function hasVisibleText(imageB64) {
     }
 
     available = true;
-    const answer = String(json.result?.response ?? '').trim().toUpperCase();
-    return { checked: true, hasText: answer.startsWith('YES'), raw: answer.slice(0, 20) };
+    const raw = String(json.result?.response ?? '').toUpperCase();
+    // the model wraps its answer in markdown often enough to matter
+    const answer = raw.replace(/[^A-Z ]/g, ' ').trim();
+    return { checked: true, hasText: /\bYES\b/.test(answer), raw: raw.trim().slice(0, 20) };
   } catch {
     return { checked: false, hasText: false };
   }

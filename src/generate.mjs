@@ -18,6 +18,8 @@ const MAX_IMAGE_ATTEMPTS = 4;
 const MAX_COMBO_ATTEMPTS = 12;
 
 const force = process.argv.includes('--force');
+const limitArg = process.argv.find(a => a.startsWith('--limit='));
+const limit = limitArg ? Number(limitArg.split('=')[1]) : Infinity;   // for smoke tests
 const dry = process.argv.includes('--dry-run');
 
 const brand = JSON.parse(await readFile(path.join(ROOT, 'brand.json'), 'utf8'));
@@ -69,8 +71,9 @@ const outDir = path.join(POSTS, monthKey);
 await mkdir(outDir, { recursive: true });
 
 const results = [];
+const toRender = planned.slice(0, limit);
 await withBrowser(async (page) => {
-  for (const post of planned) {
+  for (const post of toRender) {
     const dayId = String(post.day).padStart(2, '0');
     let imageB64 = null, hash = null, attempts = 0;
 
