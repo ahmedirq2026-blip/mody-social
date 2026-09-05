@@ -3,7 +3,7 @@
 // Keeps each Buffer channel topped up to TARGET_QUEUE scheduled posts, which
 // stays safely under Buffer's free-plan cap of 10 queued posts per channel.
 
-import { getOrganizationId, getChannels, getScheduledByChannel, createImagePost, classifyChannel } from './lib/buffer.mjs';
+import { getOrganizationId, getChannels, getScheduledByChannel, createPost, classifyChannel } from './lib/buffer.mjs';
 import { listPlans, loadPlan, loadPosted, savePosted, imageUrl, pagesBaseUrl, ROOT } from './lib/store.mjs';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
@@ -26,17 +26,17 @@ const aiLabel = process.env.AI_LABEL === 'on';
  * first comment. Instagram feed posts cannot carry a link at all, so the link
  * goes in the first comment and the profile bio.
  */
-function metadataFor(kind) {
+function metadataFor(kind, isReel = false) {
   if (kind === 'google') {
     return { google: { type: 'whats_new', detailsWhatsNew: { button: 'book', link: booking } } };
   }
   // firstComment is a paid Buffer feature; the booking link lives in the caption instead
   if (kind === 'facebook') {
-    return { facebook: { type: 'post', ...(FIRST_COMMENT ? { firstComment: `Book your hand wash here: ${booking}` } : {}) } };
+    return { facebook: { type: isReel ? 'reel' : 'post', ...(FIRST_COMMENT ? { firstComment: `Book your hand wash here: ${booking}` } : {}) } };
   }
   return {
     instagram: {
-      type: 'post',
+      type: isReel ? 'reel' : 'post',
       shouldShareToFeed: true,        // required by the schema
       ...(aiLabel ? { isAiGenerated: true } : {}),
       ...(FIRST_COMMENT ? { firstComment: `Book your hand wash: ${site} (link in bio too)` } : {})
@@ -104,7 +104,12 @@ for (const channel of wanted) {
 
   for (const p of todo) {
     const isGoogle = channel.kind === 'google';
-    const rel = isGoogle ? p.images.square : p.images.feed;
+    const isReel = p.kind === 'reel';
+
+    // Google Business Profile does not accept video through Buffer
+    if (isReel && isGoogle) continue;
+
+    const rel = isReel ? p.video : (isGoogle ? p.images.square : p.images.feed);
     const url = imageUrl(rel);
     const text = isGoogle ? p.captions.gbp : p.captions.social;
 
@@ -117,9 +122,9 @@ for (const channel of wanted) {
 
     if (dry) { console.log(`  [dry] ${p.localLabel} -> ${url}`); continue; }
 
-    const post = await createImagePost({
-      channelId: channel.id, text, imageUrl: url, dueAt: p.dueAt,
-      metadata: metadataFor(channel.kind)
+    const post = await createPost({
+      channelId: channel.id, text, url, dueAt: p.dueAt, isReel,
+      metadata: metadataFor(channel.kind, isReel)
     });
     posted[channel.id] = posted[channel.id] ?? {};
     posted[channel.id][`${p.monthKey}#${p.day}`] = { postId: post.id, dueAt: p.dueAt, at: new Date().toISOString() };

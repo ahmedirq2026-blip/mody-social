@@ -55,8 +55,12 @@ export function imageUrl(relPath) {
 }
 
 /** The oldest month whose plan has fewer posts than the month has days. */
-export async function findIncompleteMonth() {
+export async function findIncompleteMonth(suffix = '') {
+  const want = suffix
+    ? new RegExp('^\\d{4}-\\d{2}' + suffix + '$')
+    : /^\d{4}-\d{2}$/;
   for (const key of await listPlans()) {
+    if (!want.test(key)) continue;
     const [y, m] = key.split('-').map(Number);
     const days = new Date(Date.UTC(y, m, 0)).getUTCDate();
     const plan = await loadPlan(key);

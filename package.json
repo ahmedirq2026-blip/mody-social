@@ -8,7 +8,9 @@
     "doctor": "node src/doctor.mjs",
     "generate": "node src/generate.mjs",
     "topup": "node src/topup.mjs",
-    "preview": "node src/preview.mjs"
+    "preview": "node src/preview.mjs",
+    "reels": "node src/reels.mjs",
+    "cleanup": "node scripts/cleanup.mjs"
   },
   "engines": {
     "node": ">=20"

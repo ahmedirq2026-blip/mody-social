@@ -134,6 +134,9 @@ await withBrowser(async (page) => {
     const feed = await renderPost(page, { imageB64, layout: post.layout, size: SIZES.feed, copy: post.copy });
     const square = await renderPost(page, { imageB64, layout: post.layout, size: SIZES.square, copy: post.copy });
 
+    const relPhoto = `posts/${monthKey}/day${dayId}-photo.jpg`;
+    await writeFile(path.join(ROOT, relPhoto), Buffer.from(imageB64, "base64"));
+
     const relFeed = `posts/${monthKey}/day${dayId}-feed.jpg`;
     const relSquare = `posts/${monthKey}/day${dayId}-gbp.jpg`;
     await writeFile(path.join(ROOT, relFeed), feed);
@@ -152,7 +155,7 @@ await withBrowser(async (page) => {
       comboId: post.comboId,
       hash,
       attempts,
-      images: { feed: relFeed, square: relSquare },
+      images: { feed: relFeed, square: relSquare, photo: relPhoto },
       copy: post.copy,
       hashtags: post.hashtags,
       captions: post.captions

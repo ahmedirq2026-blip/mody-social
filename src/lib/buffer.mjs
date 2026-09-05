@@ -95,7 +95,11 @@ export async function getScheduledByChannel(organizationId) {
   throw new Error('Could not read scheduled posts from Buffer (schema mismatch). Run: npm run doctor');
 }
 
-export async function createImagePost({ channelId, text, imageUrl, dueAt, metadata }) {
+export async function createPost({ channelId, text, url, dueAt, metadata, isReel = false, thumbnailUrl }) {
+  const asset = isReel
+    ? { video: { url, ...(thumbnailUrl ? { thumbnailUrl } : {}) } }
+    : { image: { url } };
+
   const { data } = await gql(
     `mutation CreatePost($input: CreatePostInput!) {
        createPost(input: $input) {
@@ -110,7 +114,7 @@ export async function createImagePost({ channelId, text, imageUrl, dueAt, metada
         schedulingType: 'automatic',
         mode: 'customScheduled',
         dueAt,
-        assets: [{ image: { url: imageUrl } }],
+        assets: [asset],
         ...(metadata ? { metadata } : {})
       }
     }
@@ -120,6 +124,9 @@ export async function createImagePost({ channelId, text, imageUrl, dueAt, metada
   if (!result?.post?.id) throw new Error(`Unexpected createPost response: ${JSON.stringify(result).slice(0, 300)}`);
   return result.post;
 }
+
+/** Back-compat wrapper for the image-only callers. */
+export const createImagePost = ({ imageUrl, ...rest }) => createPost({ ...rest, url: imageUrl });
 
 export const SERVICE_ALIASES = {
   facebook: ['facebook', 'facebookpage', 'facebook_page'],
