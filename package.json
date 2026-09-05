@@ -1,0 +1,19 @@
+{
+  "name": "mody-social",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Monthly AI-generated social campaign for Mody Car Wash - Facebook, Instagram and Google Business Profile via Buffer",
+  "scripts": {
+    "doctor": "node src/doctor.mjs",
+    "generate": "node src/generate.mjs",
+    "topup": "node src/topup.mjs",
+    "preview": "node src/preview.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "playwright": "^1.49.1"
+  }
+}

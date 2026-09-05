@@ -1,0 +1,45 @@
+name: Daily Buffer Top-Up
+
+# Keeps every channel at TARGET_QUEUE scheduled posts, staying under Buffer's
+# free-plan cap of 10 queued posts per channel.
+on:
+  schedule:
+    - cron: '17 11 * * *'     # 06:17 ET (winter) / 07:17 ET (summer)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mody-topup
+  cancel-in-progress: false
+
+jobs:
+  topup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Top up Buffer
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          PAGES_BASE_URL: ${{ vars.PAGES_BASE_URL }}
+          TARGET_QUEUE: ${{ vars.TARGET_QUEUE || 7 }}
+        run: node src/topup.mjs
+
+      - name: Record what was scheduled
+        run: |
+          git config user.name  "mody-social bot"
+          git config user.email "actions@github.com"
+          git add data/posted.json
+          if git diff --staged --quiet; then
+            echo "Nothing scheduled today."
+          else
+            git commit -m "ops: record scheduled posts"
+            git push
+          fi

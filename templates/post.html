@@ -1,0 +1,170 @@
+<meta charset="utf-8">
+<style>
+@font-face{
+  font-family:'Manrope';
+  src:url(data:font/woff2;base64,__FONT_B64__) format('woff2');
+  font-weight:200 800; font-style:normal; font-display:block;
+}
+:root{
+  --navy:#00448C; --blue:#005BB7; --cyan:#00CCF9; --deep:#00344A;
+  --ink:#191C1E; --paper:#F7F9FB;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--deep)}
+body{font-family:'Manrope',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+
+#canvas{position:relative;overflow:hidden;background:var(--deep)}
+
+/* ---------- photo ---------- */
+.photo{position:absolute;inset:0;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;display:block;
+  filter:saturate(1.07) contrast(1.05) brightness(1.02)}
+.photo::after{content:'';position:absolute;inset:0;
+  background:linear-gradient(160deg,rgba(0,204,249,.10),rgba(0,68,140,.16))}
+
+/* ---------- shared type ---------- */
+.kicker{font-weight:800;font-size:var(--kicker);letter-spacing:.2em;text-transform:uppercase;color:var(--cyan)}
+.headline{font-weight:800;font-size:var(--h);line-height:.98;letter-spacing:-.035em;color:#fff}
+.headline .l2{color:var(--cyan)}
+.sub{font-weight:500;font-size:var(--s);line-height:1.34;color:rgba(255,255,255,.80);max-width:88%}
+.cta{display:inline-flex;align-items:center;gap:.5em;background:var(--cyan);color:var(--deep);
+  font-weight:800;font-size:var(--cta);letter-spacing:-.01em;padding:.72em 1.25em;border-radius:999px;
+  box-shadow:0 12px 30px rgba(0,204,249,.28)}
+.cta svg{width:1em;height:1em}
+
+.chip{display:inline-flex;align-items:center;gap:.45em;font-weight:800;font-size:var(--chip);
+  letter-spacing:.02em;color:#fff;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.26);
+  padding:.5em 1em;border-radius:999px;backdrop-filter:blur(14px)}
+.chip .dot{width:.5em;height:.5em;border-radius:50%;background:var(--cyan)}
+
+.logo{width:var(--logo);height:var(--logo);border-radius:50%;object-fit:cover;
+  box-shadow:0 10px 34px rgba(0,0,0,.34),0 0 0 4px rgba(255,255,255,.92)}
+.wordmark{display:flex;flex-direction:column;line-height:1}
+.wordmark b{font-weight:800;font-size:var(--wm);letter-spacing:-.02em;color:#fff}
+.wordmark span{font-weight:700;font-size:calc(var(--wm)*.46);letter-spacing:.22em;
+  text-transform:uppercase;color:var(--cyan);margin-top:.35em}
+
+/* ---------- footer bar ---------- */
+.footer{display:flex;align-items:center;gap:var(--gap);font-weight:700;
+  font-size:var(--foot);letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.72)}
+.footer i{width:4px;height:4px;border-radius:50%;background:var(--cyan);flex:none;display:block}
+
+/* ================= layout: PANEL ================= */
+.panel .photo{inset:0 0 var(--panelH) 0}
+.panel .plate{position:absolute;left:0;right:0;bottom:0;height:var(--panelH);
+  background:linear-gradient(180deg,var(--navy),var(--deep));
+  padding:calc(var(--padY)*.92) var(--padX) calc(var(--padY)*.78);
+  display:flex;flex-direction:column;justify-content:center;gap:calc(var(--gap)*.9)}
+.panel .plate::before{content:'';position:absolute;top:0;left:0;right:0;height:6px;
+  background:linear-gradient(90deg,var(--cyan),var(--blue) 60%,var(--navy))}
+.panel .badge{position:absolute;top:var(--padY);left:var(--padX);display:flex;align-items:center;gap:calc(var(--gap)*.8)}
+.panel .topchip{position:absolute;top:var(--padY);right:var(--padX)}
+.panel .platefoot{margin-top:calc(var(--gap)*.15);padding-top:calc(var(--gap)*.72);border-top:1px solid rgba(255,255,255,.18)}
+
+/* ================= layout: SCRIM ================= */
+.scrim .veil{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(0,52,74,.55) 0%,rgba(0,52,74,0) 26%,rgba(0,52,74,.62) 55%,rgba(0,52,74,.96) 100%)}
+.scrim .stack{position:absolute;left:var(--padX);right:var(--padX);bottom:var(--padY);
+  display:flex;flex-direction:column;gap:var(--gap)}
+.scrim .badge{position:absolute;top:var(--padY);left:var(--padX);display:flex;align-items:center;gap:calc(var(--gap)*.8)}
+.scrim .topchip{position:absolute;top:var(--padY);right:var(--padX)}
+.scrim .rule{height:5px;width:120px;border-radius:99px;background:var(--cyan)}
+
+/* ================= layout: GLASS ================= */
+.glass .veil{position:absolute;inset:0;background:linear-gradient(200deg,rgba(0,52,74,.30),rgba(0,52,74,.72))}
+.glass .card{position:absolute;left:var(--padX);right:var(--padX);bottom:var(--padY);
+  background:rgba(0,52,74,.52);border:1px solid rgba(255,255,255,.20);border-radius:calc(var(--padX)*.75);
+  backdrop-filter:blur(26px) saturate(1.3);
+  padding:calc(var(--padY)*.92) calc(var(--padX)*.9);
+  display:flex;flex-direction:column;gap:var(--gap);
+  box-shadow:0 30px 80px rgba(0,0,0,.36)}
+.glass .badge{position:absolute;top:var(--padY);left:var(--padX);display:flex;align-items:center;gap:calc(var(--gap)*.8)}
+.glass .topchip{position:absolute;top:var(--padY);right:var(--padX)}
+</style>
+
+<div id="canvas">
+  <div class="photo"><img id="bg" alt=""></div>
+  <div class="veil"></div>
+
+  <div class="badge">
+    <img class="logo" id="logo" alt="">
+    <div class="wordmark"><b>Mody Car Wash</b><span id="kickerTop">Temple Hills, MD</span></div>
+  </div>
+  <div class="topchip"><span class="chip"><span class="dot"></span><span id="chip"></span></span></div>
+
+  <div id="slot"></div>
+</div>
+
+<script>
+(() => {
+const D = /*__DATA__*/ null;
+
+const S = D.size;                       // {w,h}
+const scale = S.w / 1080;               // all metrics authored at 1080px wide
+const px = n => (n * scale) + 'px';
+
+const root = document.documentElement.style;
+const canvas = document.getElementById('canvas');
+canvas.style.width = S.w + 'px';
+canvas.style.height = S.h + 'px';
+canvas.classList.add(D.layout);
+
+const isSquare = S.h / S.w < 1.1;
+root.setProperty('--padX', px(72));
+root.setProperty('--padY', px(isSquare ? 62 : 76));
+root.setProperty('--gap', px(isSquare ? 20 : 24));
+root.setProperty('--h', px(isSquare ? 74 : 82));
+root.setProperty('--s', px(isSquare ? 27 : 29));
+root.setProperty('--kicker', px(20));
+root.setProperty('--cta', px(26));
+root.setProperty('--chip', px(20));
+root.setProperty('--foot', px(19));
+root.setProperty('--logo', px(isSquare ? 96 : 108));
+root.setProperty('--wm', px(30));
+root.setProperty('--panelH', px(isSquare ? 452 : 566));
+
+document.getElementById('bg').src = D.imageSrc;
+document.getElementById('chip').textContent = D.chip;
+document.getElementById('kickerTop').textContent = D.kicker;
+
+const logo = document.getElementById('logo');
+if (D.logoSrc) { logo.src = D.logoSrc; }
+else { logo.remove(); }
+
+const arrow = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M12 5l7 7-7 7"/></svg>';
+
+const textBlock = `
+  <div class="kicker">${D.eyebrow}</div>
+  <h1 class="headline" id="hl">${D.headline[0]}<br><span class="l2">${D.headline[1]}</span></h1>
+  <p class="sub">${D.sub}</p>
+  <div><span class="cta">${D.cta} ${arrow}</span></div>
+`;
+
+const footer = `
+  <div class="footer"><span>${D.footer[0]}</span><i></i><span>${D.footer[1]}</span><i></i><span>${D.footer[2]}</span></div>
+`;
+
+const slot = document.getElementById('slot');
+if (D.layout === 'panel') {
+  slot.outerHTML = `<div class="plate">${textBlock}<div class="platefoot">${footer}</div></div>`;
+} else if (D.layout === 'scrim') {
+  slot.outerHTML = `<div class="stack"><div class="rule"></div>${textBlock}${footer}</div>`;
+} else {
+  slot.outerHTML = `<div class="card">${textBlock}${footer}</div>`;
+}
+
+// Shrink the headline until it fits its container - never let type overflow.
+(function fit() {
+  const hl = document.getElementById('hl');
+  const box = hl.parentElement;
+  let size = parseFloat(getComputedStyle(hl).fontSize);
+  let guard = 0;
+  while (guard++ < 40 && (hl.scrollWidth > box.clientWidth + 1 || box.scrollHeight > box.clientHeight + 1)) {
+    size -= 2;
+    hl.style.fontSize = size + 'px';
+  }
+})();
+
+window.__READY__ = true;
+})();
+</script>
