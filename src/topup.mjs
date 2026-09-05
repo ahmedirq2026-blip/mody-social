@@ -11,6 +11,8 @@ import path from 'node:path';
 const brand = JSON.parse(await readFile(path.join(ROOT, 'brand.json'), 'utf8'));
 const site = brand.business.website;
 const booking = brand.business.bookingUrl || site;
+// Buffer gates automatic first comments behind a paid plan.
+const FIRST_COMMENT = process.env.BUFFER_FIRST_COMMENT === '1';
 
 // The owner opted out of the AI disclosure label. We simply do not declare
 // anything: the field is omitted rather than set to false, because telling Meta
@@ -28,15 +30,16 @@ function metadataFor(kind) {
   if (kind === 'google') {
     return { google: { type: 'whats_new', detailsWhatsNew: { button: 'book', link: booking } } };
   }
+  // firstComment is a paid Buffer feature; the booking link lives in the caption instead
   if (kind === 'facebook') {
-    return { facebook: { type: 'post', firstComment: `Book your hand wash here: ${booking}` } };
+    return { facebook: { type: 'post', ...(FIRST_COMMENT ? { firstComment: `Book your hand wash here: ${booking}` } : {}) } };
   }
   return {
     instagram: {
       type: 'post',
       shouldShareToFeed: true,        // required by the schema
       ...(aiLabel ? { isAiGenerated: true } : {}),
-      firstComment: `Book your hand wash: ${site} (link in bio too)`
+      ...(FIRST_COMMENT ? { firstComment: `Book your hand wash: ${site} (link in bio too)` } : {})
     }
   };
 }

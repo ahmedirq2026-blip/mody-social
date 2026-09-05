@@ -11,7 +11,7 @@ import { withBrowser, renderPost, photoHash, hammingDistance, SIZES } from './li
 import { buildPost, serviceSequence } from './lib/compose.mjs';
 import { monthSlots, targetMonth } from './lib/schedule.mjs';
 import { mulberry32, hashString } from './lib/random.mjs';
-import { ROOT, POSTS, loadHistory, saveHistory, loadPlan, savePlan } from './lib/store.mjs';
+import { ROOT, POSTS, loadHistory, saveHistory, loadPlan, savePlan, findIncompleteMonth } from './lib/store.mjs';
 
 const HASH_MIN_DISTANCE = 12;   // below this two photos are "too similar"
 const MAX_IMAGE_ATTEMPTS = 3;
@@ -25,14 +25,34 @@ const limit = limitArg ? Number(limitArg.split('=')[1]) : Infinity;   // for smo
 const dry = process.argv.includes('--dry-run');
 
 const brand = JSON.parse(await readFile(path.join(ROOT, 'brand.json'), 'utf8'));
-const { year, month, key: monthKey } = targetMonth();
+let { year, month, key: monthKey } = targetMonth();
+if (!process.env.MONTH) {
+  const pending = await findIncompleteMonth();
+  if (pending) {
+    ({ year, month, key: monthKey } = pending);
+    console.log(`Resuming ${monthKey}: ${pending.done}/${pending.days} posts already done.`);
+  } else {
+    // Fill the rest of the current month before starting the next one - there
+    // is no reason to stay silent for the days that are still ahead of us.
+    const now = new Date();
+    const curKey = `${now.getUTCFullYear()}-${String(now.getUTCMonth() + 1).padStart(2, '0')}`;
+    const remaining = monthSlots(now.getUTCFullYear(), now.getUTCMonth() + 1)
+      .filter(s => new Date(s.dueAt).getTime() > Date.now()).length;
+    if (remaining >= 3 && !(await loadPlan(curKey))) {
+      year = now.getUTCFullYear();
+      month = now.getUTCMonth() + 1;
+      monthKey = curKey;
+      console.log(`${remaining} days still ahead this month - filling ${monthKey} first.`);
+    }
+  }
+}
 
 const existing = await loadPlan(monthKey);
 const complete = existing && existing.posts.length >= monthSlots(year, month).length;
 if (complete && !force) {
-  console.error(`A complete plan for ${monthKey} already exists (${existing.posts.length} posts).`);
-  console.error('Re-running would replace it. Pass --force if that is what you want.');
-  process.exit(1);
+  console.log(`${monthKey} is already complete (${existing.posts.length} posts). Nothing to do.`);
+  console.log('Pass --force to regenerate it from scratch.');
+  process.exit(0);
 }
 // A partial plan means a previous run was interrupted - carry on from there.
 const done = force ? new Map() : new Map((existing?.posts ?? []).map(p => [p.day, p]));

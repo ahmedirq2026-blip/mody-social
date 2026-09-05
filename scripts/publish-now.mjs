@@ -7,22 +7,27 @@ import { gql, getOrganizationId, getChannels, classifyChannel } from '../src/lib
 import { ROOT, imageUrl } from '../src/lib/store.mjs';
 
 const dry = process.argv.includes('--dry-run');
+const onlyArg = process.argv.find(a => a.startsWith('--only='));
+const only = onlyArg ? onlyArg.split('=')[1].split(',') : [];
 const brand = JSON.parse(await readFile(path.join(ROOT, 'brand.json'), 'utf8'));
 const posts = JSON.parse(await readFile(path.join(ROOT, 'scripts', 'publish-now.json'), 'utf8'));
 const booking = brand.business.bookingUrl || brand.business.website;
+// Buffer gates automatic first comments behind a paid plan.
+const FIRST_COMMENT = process.env.BUFFER_FIRST_COMMENT === '1';
 
 function metadataFor(kind) {
   if (kind === 'google') {
     return { google: { type: 'whats_new', detailsWhatsNew: { button: 'book', link: booking } } };
   }
+  // firstComment is a paid Buffer feature; the booking link lives in the caption instead
   if (kind === 'facebook') {
-    return { facebook: { type: 'post', firstComment: `Book your hand wash here: ${booking}` } };
+    return { facebook: { type: 'post', ...(FIRST_COMMENT ? { firstComment: `Book your hand wash here: ${booking}` } : {}) } };
   }
   return {
     instagram: {
       type: 'post',
       shouldShareToFeed: true,
-      firstComment: `Book your hand wash: ${brand.business.website} (link in bio too)`
+      ...(FIRST_COMMENT ? { firstComment: `Book your hand wash: ${brand.business.website} (link in bio too)` } : {})
     }
   };
 }
@@ -37,7 +42,8 @@ const MUTATION = `mutation Publish($input: CreatePostInput!) {
 const orgId = await getOrganizationId();
 const channels = (await getChannels(orgId))
   .map(c => ({ ...c, kind: classifyChannel(c.service) }))
-  .filter(c => ['facebook', 'instagram', 'google'].includes(c.kind));
+  .filter(c => ['facebook', 'instagram', 'google'].includes(c.kind))
+  .filter(c => !only.length || only.includes(c.kind));
 
 console.log(`Channels: ${channels.map(c => c.kind).join(', ')}`);
 let ok = 0, failed = 0;

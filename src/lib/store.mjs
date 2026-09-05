@@ -53,3 +53,14 @@ export function imageUrl(relPath) {
   if (!base) throw new Error('Cannot build image URL: set PAGES_BASE_URL or run inside GitHub Actions.');
   return `${base}/${relPath.replace(/^\/+/, '')}`;
 }
+
+/** The oldest month whose plan has fewer posts than the month has days. */
+export async function findIncompleteMonth() {
+  for (const key of await listPlans()) {
+    const [y, m] = key.split('-').map(Number);
+    const days = new Date(Date.UTC(y, m, 0)).getUTCDate();
+    const plan = await loadPlan(key);
+    if ((plan?.posts?.length ?? 0) < days) return { key, year: y, month: m, done: plan?.posts?.length ?? 0, days };
+  }
+  return null;
+}
