@@ -2,10 +2,12 @@ name: Generate Monthly Posts
 
 # THE BUTTON: Actions -> Generate Monthly Posts -> Run workflow
 on:
-  # The Cloudflare free allowance resets at 00:00 UTC. If a month was left
-  # half-generated, this picks it up automatically the moment quota is back.
+  # Cloudflare does not publish when the free allowance resets, and it was still
+  # spent at 00:30 UTC, so a single nightly attempt can lose a whole day. Checking
+  # every three hours costs nothing on a public repo: a finished month exits in
+  # seconds and an empty quota stops immediately.
   schedule:
-    - cron: '20 0 * * *'
+    - cron: '20 */3 * * *'
   workflow_dispatch:
     inputs:
       month:

@@ -1,9 +1,9 @@
 name: Generate Monthly Reels
 
 on:
-  # runs after the image pass, once the Cloudflare allowance has reset
+  # runs an hour after the image pass, on the same three-hourly cadence
   schedule:
-    - cron: '40 1 * * *'
+    - cron: '50 */3 * * *'
   workflow_dispatch:
     inputs:
       month:
