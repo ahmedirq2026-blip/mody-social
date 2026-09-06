@@ -40,8 +40,10 @@ jobs:
           path: ~/.cache/ms-playwright
           key: playwright-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
       - run: npx playwright install --with-deps chromium
-      - name: Check ffmpeg
-        run: ffmpeg -version | head -1
+      - name: Check ffmpeg and ffprobe
+        run: |
+          ffmpeg -version | head -1
+          ffprobe -version | head -1 || echo "ffprobe MISSING - track lengths will not be checked"
 
       - name: Build the reels
         env:

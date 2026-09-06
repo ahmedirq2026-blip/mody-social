@@ -28,17 +28,27 @@ async function loadAssets() {
 }
 
 export async function musicTracks() {
+  let files;
   try {
-    const files = (await readdir(MUSIC_DIR)).filter(f => /\.(mp3|m4a|aac|wav)$/i.test(f)).sort();
-    const usable = [];
-    for (const f of files) {
-      // a track shorter than the reel would cut the video short via -shortest
-      const d = await trackDuration(path.join(MUSIC_DIR, f)).catch(() => 0);
-      if (d >= REEL.duration + 0.5) usable.push(f);
-      else console.warn("  skipping " + f + ": only " + d.toFixed(1) + "s, shorter than the reel");
+    files = (await readdir(MUSIC_DIR)).filter(f => /\.(mp3|m4a|aac|wav)$/i.test(f)).sort();
+  } catch {
+    return [];
+  }
+
+  const usable = [];
+  for (const f of files) {
+    let seconds = null;
+    try {
+      seconds = await trackDuration(path.join(MUSIC_DIR, f));
+    } catch (err) {
+      console.warn(`  could not measure ${f} (${String(err.message).split('\n')[0].slice(0, 80)}) - keeping it`);
+      usable.push(f);
+      continue;
     }
-    return usable;
-  } catch { return []; }
+    if (seconds >= REEL.duration + 0.5) usable.push(f);
+    else console.warn(`  skipping ${f}: ${seconds.toFixed(1)}s, shorter than the ${REEL.duration}s reel`);
+  }
+  return usable;
 }
 
 async function trackDuration(file) {
@@ -101,7 +111,7 @@ export async function renderReel(page, { photoB64, copy, brand, musicFile, outPa
 
   if (musicFile) {
     const full = path.join(MUSIC_DIR, musicFile);
-    const len = await trackDuration(full);
+    const len = await trackDuration(full).catch(() => 0);
     // start somewhere past the intro so different reels do not all sound alike
     const offset = len > REEL.duration + 12 ? Math.min(len - REEL.duration - 2, 8 + (len % 17)) : 0;
     args.push('-ss', offset.toFixed(2), '-i', full,
