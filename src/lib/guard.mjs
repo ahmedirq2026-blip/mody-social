@@ -8,10 +8,12 @@
 
 const MODEL = '@cf/meta/llama-3.2-11b-vision-instruct';
 const QUESTION =
-  'Look at this advertising photo. Is there any clearly legible writing that a ' +
-  'viewer would read - words, a brand name, a sign, or garbled letters printed ' +
-  'across the car body, a wall or a banner? Ignore tiny incidental details such ' +
-  'as tyre sidewall texture, wheel centre caps and small dashboard markings. ' +
+  'Look at this advertising photo of a vehicle. Answer YES if EITHER is true: ' +
+  '(a) there is clearly legible writing a viewer would read - words, a brand ' +
+  'name, a sign, or garbled letters across the car body, a wall or a banner; or ' +
+  '(b) there is a visible car manufacturer emblem or badge on the body, grille, ' +
+  'bonnet, boot or tailgate. Ignore tyre sidewall texture, tiny wheel centre ' +
+  'caps and small dashboard markings. Otherwise answer NO. ' +
   'Answer with exactly one word: YES or NO.';
 
 let available = null;   // null = unknown, false = licence not accepted
