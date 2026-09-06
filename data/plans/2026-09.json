@@ -2,7 +2,7 @@
   "month": "2026-09",
   "timezone": "America/New_York",
   "postTime": "10:00",
-  "generatedAt": "2026-09-06T17:16:46.785Z",
+  "generatedAt": "2026-09-06T17:22:55.028Z",
   "posts": [
     {
       "day": 1,
@@ -10,8 +10,8 @@
       "localLabel": "2026-09-01 10:00 ET",
       "serviceId": "super",
       "layout": "panel",
-      "comboId": "46b18c5f",
-      "hash": "e165220ac4f79bdc",
+      "comboId": "4234f1cc",
+      "hash": "e7e36bd0352d8a0a",
       "attempts": 3,
       "images": {
         "feed": "posts/2026-09/day01-feed.jpg",
@@ -59,8 +59,8 @@
       "localLabel": "2026-09-02 10:00 ET",
       "serviceId": "tint",
       "layout": "scrim",
-      "comboId": "915116e2",
-      "hash": "f2b01bcded7c18c0",
+      "comboId": "f75774f6",
+      "hash": "e6cb59602b3d3456",
       "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day02-feed.jpg",
@@ -108,8 +108,8 @@
       "localLabel": "2026-09-03 10:00 ET",
       "serviceId": "exterior",
       "layout": "glass",
-      "comboId": "9f1a218a",
-      "hash": "92ac9468c0c93fbf",
+      "comboId": "86ba4025",
+      "hash": "cdf133711c03bc9c",
       "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day03-feed.jpg",
@@ -157,8 +157,8 @@
       "localLabel": "2026-09-04 10:00 ET",
       "serviceId": "combo",
       "layout": "panel",
-      "comboId": "c03be431",
-      "hash": "c17357c1ad76a06c",
+      "comboId": "6b76f155",
+      "hash": "bec06e7f10b8854e",
       "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day04-feed.jpg",
@@ -206,8 +206,8 @@
       "localLabel": "2026-09-05 10:00 ET",
       "serviceId": "interior",
       "layout": "scrim",
-      "comboId": "f88f1cc6",
-      "hash": "91acb65b647249da",
+      "comboId": "d7e2ac76",
+      "hash": "ff8ae94ec4598a30",
       "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day05-feed.jpg",
@@ -255,8 +255,8 @@
       "localLabel": "2026-09-06 10:00 ET",
       "serviceId": "exterior",
       "layout": "glass",
-      "comboId": "cfdf817c",
-      "hash": "c7f090dcd8c2839f",
+      "comboId": "79923330",
+      "hash": "d2e62f1d3478d0e1",
       "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day06-feed.jpg",
@@ -304,9 +304,9 @@
       "localLabel": "2026-09-07 10:00 ET",
       "serviceId": "super",
       "layout": "panel",
-      "comboId": "6cb31145",
-      "hash": "be59814717697e09",
-      "attempts": 2,
+      "comboId": "48399fd9",
+      "hash": "f8b396581fd1c20b",
+      "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day07-feed.jpg",
         "square": "posts/2026-09/day07-gbp.jpg",
@@ -353,24 +353,24 @@
       "localLabel": "2026-09-08 10:00 ET",
       "serviceId": "combo",
       "layout": "scrim",
-      "comboId": "a253c952",
-      "hash": "fb8681291f5fe121",
-      "attempts": 3,
+      "comboId": "d495e9df",
+      "hash": "f2cf4c7c51c00ff0",
+      "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day08-feed.jpg",
         "square": "posts/2026-09/day08-gbp.jpg",
         "photo": "posts/2026-09/day08-photo.jpg"
       },
       "copy": {
-        "eyebrow": "TEMPLE HILLS, MD",
+        "eyebrow": "PRINCE GEORGE’S COUNTY",
         "kicker": "Temple Hills, MD",
-        "chip": "Eco & Paint-Safe",
+        "chip": "Mon–Sat 9–5",
         "headline": [
-          "Your whole car,",
-          "handled."
+          "Everything clean.",
+          "Everything shining."
         ],
-        "sub": "The package that covers everything your car needs.",
-        "cta": "Book Today",
+        "sub": "Add precise rim detailing and tire shine to finish it off.",
+        "cta": "Drive In Today",
         "footer": [
           "4533 St Barnabas Rd",
           "Mon–Sat 9–5",
@@ -380,20 +380,20 @@
       },
       "hashtags": [
         "#CarCleaning",
-        "#DMVCarWash",
-        "#InsideAndOut",
         "#ModyCarWash",
-        "#CarDetailing",
-        "#TempleHillsMD",
-        "#CarCare",
+        "#Suitland",
+        "#AutoDetailing",
+        "#InsideAndOut",
+        "#CarDetail",
         "#CleanCar",
-        "#OxonHill",
-        "#CarWash",
-        "#DetailingService"
+        "#TempleHillsMD",
+        "#CampSprings",
+        "#HandCarWash",
+        "#CarCare"
       ],
       "captions": {
-        "social": "Your whole car, handled.\n\nThe package that covers everything your car needs.\nMody Combo — Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\n✅ Eco-friendly, paint-safe, biodegradable\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#CarCleaning #DMVCarWash #InsideAndOut #ModyCarWash #CarDetailing #TempleHillsMD #CarCare #CleanCar #OxonHill #CarWash #DetailingService",
-        "gbp": "Your whole car, handled.\n\nThe package that covers everything your car needs.\nMody Combo: Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\nEco-friendly, paint-safe, biodegradable.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+        "social": "Everything clean. Everything shining.\n\nAdd precise rim detailing and tire shine to finish it off.\nMody Combo — Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\n✅ 100% hand washed - never an automatic tunnel\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#CarCleaning #ModyCarWash #Suitland #AutoDetailing #InsideAndOut #CarDetail #CleanCar #TempleHillsMD #CampSprings #HandCarWash #CarCare",
+        "gbp": "Everything clean. Everything shining.\n\nAdd precise rim detailing and tire shine to finish it off.\nMody Combo: Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\n100% hand washed - never an automatic tunnel.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
       }
     },
     {
@@ -402,8 +402,8 @@
       "localLabel": "2026-09-09 10:00 ET",
       "serviceId": "interior",
       "layout": "glass",
-      "comboId": "e8e148bd",
-      "hash": "ec1917c520b9f68e",
+      "comboId": "f4c72c9d",
+      "hash": "ebfcd4b3c30e0161",
       "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day09-feed.jpg",
@@ -451,24 +451,24 @@
       "localLabel": "2026-09-10 10:00 ET",
       "serviceId": "tint",
       "layout": "panel",
-      "comboId": "df9d3378",
-      "hash": "a57493530f8b363c",
-      "attempts": 1,
+      "comboId": "c10b3684",
+      "hash": "d9e2c19f86c3cc98",
+      "attempts": 3,
       "images": {
         "feed": "posts/2026-09/day10-feed.jpg",
         "square": "posts/2026-09/day10-gbp.jpg",
         "photo": "posts/2026-09/day10-photo.jpg"
       },
       "copy": {
-        "eyebrow": "PRINCE GEORGE’S COUNTY",
+        "eyebrow": "ULTRA-FILTERED WATER",
         "kicker": "Temple Hills, MD",
-        "chip": "500+ Weekly Shines",
+        "chip": "Ultra-Filtered Water",
         "headline": [
-          "See clearly",
-          "again."
+          "Old film out.",
+          "Clear glass in."
         ],
-        "sub": "Defroster lines protected during removal.",
-        "cta": "Come See Us",
+        "sub": "We remove old, bubbled and purple film safely.",
+        "cta": "Book Today",
         "footer": [
           "4533 St Barnabas Rd",
           "Mon–Sat 9–5",
@@ -477,21 +477,21 @@
         "layout": "panel"
       },
       "hashtags": [
-        "#AutoDetailing",
-        "#ModyCarWash",
-        "#PrinceGeorgesCounty",
-        "#TintRemoval",
         "#CarDetailing",
-        "#DetailingLife",
-        "#PGCounty",
-        "#OxonHill",
+        "#CarWash",
+        "#MarylandCarWash",
+        "#AutoGlass",
+        "#TintRemoval",
         "#WindowTint",
-        "#CarCare",
-        "#AutoGlass"
+        "#AutoDetailing",
+        "#HandCarWash",
+        "#PrinceGeorgesCounty",
+        "#PGCounty",
+        "#ModyCarWash"
       ],
       "captions": {
-        "social": "See clearly again.\n\nDefroster lines protected during removal.\nWindow Tint Removal — Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\n✅ 500+ weekly shines\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#AutoDetailing #ModyCarWash #PrinceGeorgesCounty #TintRemoval #CarDetailing #DetailingLife #PGCounty #OxonHill #WindowTint #CarCare #AutoGlass",
-        "gbp": "See clearly again.\n\nDefroster lines protected during removal.\nWindow Tint Removal: Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\n500+ weekly shines.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+        "social": "Old film out. Clear glass in.\n\nWe remove old, bubbled and purple film safely.\nWindow Tint Removal — Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\n✅ Hydrophobic glass treatment\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#CarDetailing #CarWash #MarylandCarWash #AutoGlass #TintRemoval #WindowTint #AutoDetailing #HandCarWash #PrinceGeorgesCounty #PGCounty #ModyCarWash",
+        "gbp": "Old film out. Clear glass in.\n\nWe remove old, bubbled and purple film safely.\nWindow Tint Removal: Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\nHydrophobic glass treatment.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
       }
     },
     {
@@ -500,9 +500,9 @@
       "localLabel": "2026-09-11 10:00 ET",
       "serviceId": "super",
       "layout": "scrim",
-      "comboId": "10d83b51",
-      "hash": "aa10126f6cc5af9e",
-      "attempts": 2,
+      "comboId": "73952bc0",
+      "hash": "8a69b5772caac84d",
+      "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day11-feed.jpg",
         "square": "posts/2026-09/day11-gbp.jpg",
@@ -549,9 +549,9 @@
       "localLabel": "2026-09-12 10:00 ET",
       "serviceId": "exterior",
       "layout": "glass",
-      "comboId": "9e3bda5a",
-      "hash": "be84904b35e7e2f0",
-      "attempts": 3,
+      "comboId": "7c1c8509",
+      "hash": "8eb1b986c3c8c9e6",
+      "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day12-feed.jpg",
         "square": "posts/2026-09/day12-gbp.jpg",
@@ -598,8 +598,8 @@
       "localLabel": "2026-09-13 10:00 ET",
       "serviceId": "combo",
       "layout": "panel",
-      "comboId": "594c952",
-      "hash": "aa8284757b2ab6d6",
+      "comboId": "b3375a91",
+      "hash": "89a9ae973313b193",
       "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day13-feed.jpg",
@@ -647,8 +647,8 @@
       "localLabel": "2026-09-14 10:00 ET",
       "serviceId": "interior",
       "layout": "scrim",
-      "comboId": "36dce57d",
-      "hash": "fde9323681cd8133",
+      "comboId": "15172e5d",
+      "hash": "cde742622727c99c",
       "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day14-feed.jpg",
@@ -696,9 +696,9 @@
       "localLabel": "2026-09-15 10:00 ET",
       "serviceId": "tint",
       "layout": "glass",
-      "comboId": "5cb83b6c",
-      "hash": "edc11638f761465a",
-      "attempts": 3,
+      "comboId": "71a3182c",
+      "hash": "fa9ae0a38c9c991e",
+      "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day15-feed.jpg",
         "square": "posts/2026-09/day15-gbp.jpg",
@@ -745,9 +745,9 @@
       "localLabel": "2026-09-16 10:00 ET",
       "serviceId": "combo",
       "layout": "panel",
-      "comboId": "a51c6b12",
-      "hash": "91996e73794e9624",
-      "attempts": 1,
+      "comboId": "3cc41ea8",
+      "hash": "bc8e0b6b62733313",
+      "attempts": 2,
       "images": {
         "feed": "posts/2026-09/day16-feed.jpg",
         "square": "posts/2026-09/day16-gbp.jpg",
@@ -794,8 +794,8 @@
       "localLabel": "2026-09-17 10:00 ET",
       "serviceId": "tint",
       "layout": "scrim",
-      "comboId": "28cbd8fa",
-      "hash": "c48bc9965b8d2dc6",
+      "comboId": "8f6d5134",
+      "hash": "ae95e18e16c56963",
       "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day17-feed.jpg",
@@ -843,8 +843,8 @@
       "localLabel": "2026-09-18 10:00 ET",
       "serviceId": "interior",
       "layout": "glass",
-      "comboId": "8cc9bbd4",
-      "hash": "9c971031b1cfcf64",
+      "comboId": "847a470b",
+      "hash": "acad031beeec8c32",
       "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day18-feed.jpg",
@@ -892,8 +892,8 @@
       "localLabel": "2026-09-19 10:00 ET",
       "serviceId": "exterior",
       "layout": "panel",
-      "comboId": "6a217914",
-      "hash": "ff3f85949e8e8880",
+      "comboId": "a42b5980",
+      "hash": "b8e0b3db9989c9c2",
       "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day19-feed.jpg",
@@ -941,9 +941,9 @@
       "localLabel": "2026-09-20 10:00 ET",
       "serviceId": "super",
       "layout": "scrim",
-      "comboId": "f53b722d",
-      "hash": "9181ee66ddca42e5",
-      "attempts": 3,
+      "comboId": "62e951eb",
+      "hash": "94e2e3947e366227",
+      "attempts": 2,
       "images": {
         "feed": "posts/2026-09/day20-feed.jpg",
         "square": "posts/2026-09/day20-gbp.jpg",
@@ -990,9 +990,9 @@
       "localLabel": "2026-09-21 10:00 ET",
       "serviceId": "exterior",
       "layout": "glass",
-      "comboId": "7021fc36",
-      "hash": "c6c46e6ab8ae858d",
-      "attempts": 2,
+      "comboId": "f9f5dadf",
+      "hash": "93d148dbe3a42b2d",
+      "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day21-feed.jpg",
         "square": "posts/2026-09/day21-gbp.jpg",
@@ -1001,13 +1001,13 @@
       "copy": {
         "eyebrow": "100% BY HAND",
         "kicker": "Temple Hills, MD",
-        "chip": "Mon–Sat 9–5",
+        "chip": "500+ Weekly Shines",
         "headline": [
-          "That deep",
-          "hand-finished gloss."
+          "Your paint",
+          "deserves better."
         ],
         "sub": "Every panel touched by hand. Never a harsh automatic tunnel.",
-        "cta": "Book Today",
+        "cta": "Reserve Your Spot",
         "footer": [
           "4533 St Barnabas Rd",
           "Mon–Sat 9–5",
@@ -1016,21 +1016,21 @@
         "layout": "glass"
       },
       "hashtags": [
-        "#PGCounty",
-        "#ExteriorDetailing",
+        "#ModyCarWash",
+        "#TempleHillsMD",
         "#PaintCare",
         "#Suitland",
-        "#ModyCarWash",
-        "#ScratchFree",
         "#CarDetailing",
-        "#HandCarWash",
-        "#MarylandCarWash",
         "#DetailingLife",
+        "#MarylandCarWash",
+        "#CarWashDay",
+        "#CleanCar",
+        "#ShinyCar",
         "#AutoDetailing"
       ],
       "captions": {
-        "social": "That deep hand-finished gloss.\n\nEvery panel touched by hand. Never a harsh automatic tunnel.\nMody Exterior — Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out.\n\n✅ 100% hand washed - never an automatic tunnel\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#PGCounty #ExteriorDetailing #PaintCare #Suitland #ModyCarWash #ScratchFree #CarDetailing #HandCarWash #MarylandCarWash #DetailingLife #AutoDetailing",
-        "gbp": "That deep hand-finished gloss.\n\nEvery panel touched by hand. Never a harsh automatic tunnel.\nMody Exterior: Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out.\n\n100% hand washed - never an automatic tunnel.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+        "social": "Your paint deserves better.\n\nEvery panel touched by hand. Never a harsh automatic tunnel.\nMody Exterior — Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out.\n\n✅ Ultra-filtered water, zero mineral spots\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#ModyCarWash #TempleHillsMD #PaintCare #Suitland #CarDetailing #DetailingLife #MarylandCarWash #CarWashDay #CleanCar #ShinyCar #AutoDetailing",
+        "gbp": "Your paint deserves better.\n\nEvery panel touched by hand. Never a harsh automatic tunnel.\nMody Exterior: Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out.\n\nUltra-filtered water, zero mineral spots.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
       }
     },
     {
@@ -1039,9 +1039,9 @@
       "localLabel": "2026-09-22 10:00 ET",
       "serviceId": "tint",
       "layout": "panel",
-      "comboId": "18d53414",
-      "hash": "d8e68d91cc726571",
-      "attempts": 1,
+      "comboId": "83e8327a",
+      "hash": "ad9f4a0359e93c23",
+      "attempts": 2,
       "images": {
         "feed": "posts/2026-09/day22-feed.jpg",
         "square": "posts/2026-09/day22-gbp.jpg",
@@ -1088,9 +1088,9 @@
       "localLabel": "2026-09-23 10:00 ET",
       "serviceId": "combo",
       "layout": "scrim",
-      "comboId": "3980a9bd",
-      "hash": "a589dac5611c2f37",
-      "attempts": 2,
+      "comboId": "6c319a06",
+      "hash": "cad3257225b62ba5",
+      "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day23-feed.jpg",
         "square": "posts/2026-09/day23-gbp.jpg",
@@ -1137,8 +1137,8 @@
       "localLabel": "2026-09-24 10:00 ET",
       "serviceId": "interior",
       "layout": "glass",
-      "comboId": "9e0271cd",
-      "hash": "aa286ac2147fc71f",
+      "comboId": "e4417cc3",
+      "hash": "94846f303d6e88df",
       "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day24-feed.jpg",
@@ -1186,23 +1186,23 @@
       "localLabel": "2026-09-25 10:00 ET",
       "serviceId": "super",
       "layout": "panel",
-      "comboId": "b013818d",
-      "hash": "f287c04f617d2bb0",
-      "attempts": 2,
+      "comboId": "16fd0c07",
+      "hash": "8d2fbd3878d841c3",
+      "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day25-feed.jpg",
         "square": "posts/2026-09/day25-gbp.jpg",
         "photo": "posts/2026-09/day25-photo.jpg"
       },
       "copy": {
-        "eyebrow": "TEMPLE HILLS, MD",
+        "eyebrow": "ULTRA-FILTERED WATER",
         "kicker": "Temple Hills, MD",
-        "chip": "Mon–Sat 9–5",
+        "chip": "100% Hand Washed",
         "headline": [
-          "The Super Mody",
-          "difference."
+          "The premium",
+          "detail experience."
         ],
-        "sub": "Engine bay cleaning, steam clean, stain and odor removal.",
+        "sub": "Hydrophobic glass treatment that repels water and keeps vision clear.",
         "cta": "Come See Us",
         "footer": [
           "4533 St Barnabas Rd",
@@ -1212,21 +1212,21 @@
         "layout": "panel"
       },
       "hashtags": [
-        "#CarWash",
-        "#SteamClean",
-        "#CeramicLook",
-        "#Suitland",
-        "#CleanCar",
-        "#PGCounty",
+        "#EngineBayDetail",
         "#PremiumDetailing",
-        "#AutoDetailing",
+        "#CleanCar",
+        "#Suitland",
+        "#CeramicLook",
+        "#TempleHillsMD",
+        "#CarDetailing",
         "#HandCarWash",
+        "#AutoDetailing",
         "#ModyCarWash",
-        "#CampSprings"
+        "#PGCounty"
       ],
       "captions": {
-        "social": "The Super Mody difference.\n\nEngine bay cleaning, steam clean, stain and odor removal.\nSuper Mody — Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening.\n\n✅ 500+ weekly shines\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#CarWash #SteamClean #CeramicLook #Suitland #CleanCar #PGCounty #PremiumDetailing #AutoDetailing #HandCarWash #ModyCarWash #CampSprings",
-        "gbp": "The Super Mody difference.\n\nEngine bay cleaning, steam clean, stain and odor removal.\nSuper Mody: Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening.\n\n500+ weekly shines.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+        "social": "The premium detail experience.\n\nHydrophobic glass treatment that repels water and keeps vision clear.\nSuper Mody — Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening.\n\n✅ Grit-guard buckets and soft microfiber\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#EngineBayDetail #PremiumDetailing #CleanCar #Suitland #CeramicLook #TempleHillsMD #CarDetailing #HandCarWash #AutoDetailing #ModyCarWash #PGCounty",
+        "gbp": "The premium detail experience.\n\nHydrophobic glass treatment that repels water and keeps vision clear.\nSuper Mody: Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening.\n\nGrit-guard buckets and soft microfiber.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
       }
     },
     {
@@ -1235,8 +1235,8 @@
       "localLabel": "2026-09-26 10:00 ET",
       "serviceId": "combo",
       "layout": "scrim",
-      "comboId": "142c1128",
-      "hash": "8395d46aedb73214",
+      "comboId": "9a2900b",
+      "hash": "ccb3893d32935b4c",
       "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day26-feed.jpg",
@@ -1284,9 +1284,9 @@
       "localLabel": "2026-09-27 10:00 ET",
       "serviceId": "super",
       "layout": "glass",
-      "comboId": "f73819ee",
-      "hash": "a8d41e1ae0e3b5a7",
-      "attempts": 1,
+      "comboId": "b97673ad",
+      "hash": "ff3e0641807afa25",
+      "attempts": 3,
       "images": {
         "feed": "posts/2026-09/day27-feed.jpg",
         "square": "posts/2026-09/day27-gbp.jpg",
@@ -1333,8 +1333,8 @@
       "localLabel": "2026-09-28 10:00 ET",
       "serviceId": "tint",
       "layout": "panel",
-      "comboId": "4303bad2",
-      "hash": "f3813c2e03b9b8ae",
+      "comboId": "c029f408",
+      "hash": "e4b6392a2a371f86",
       "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day28-feed.jpg",
@@ -1342,15 +1342,15 @@
         "photo": "posts/2026-09/day28-photo.jpg"
       },
       "copy": {
-        "eyebrow": "HAND WASHED, ALWAYS",
+        "eyebrow": "TEMPLE HILLS, MD",
         "kicker": "Temple Hills, MD",
         "chip": "Mon–Sat 9–5",
         "headline": [
-          "Back to",
-          "factory clear."
+          "Bubbling tint?",
+          "We remove it clean."
         ],
-        "sub": "Specialized tint removal, done right the first time.",
-        "cta": "Book Today",
+        "sub": "Clear glass restored without damaging your rear defroster.",
+        "cta": "Drive In Today",
         "footer": [
           "4533 St Barnabas Rd",
           "Mon–Sat 9–5",
@@ -1359,21 +1359,21 @@
         "layout": "panel"
       },
       "hashtags": [
-        "#CarCare",
+        "#MarylandCarWash",
         "#ModyCarWash",
-        "#TintRemoval",
-        "#ClearGlass",
-        "#HandCarWash",
-        "#PrinceGeorgesCounty",
-        "#CarDetailing",
+        "#CleanCar",
+        "#AutoDetailing",
+        "#CarWash",
         "#DetailingLife",
-        "#DMVCarWash",
+        "#PrinceGeorgesCounty",
+        "#ClearGlass",
         "#TintRepair",
-        "#OxonHill"
+        "#CampSprings",
+        "#TintRemoval"
       ],
       "captions": {
-        "social": "Back to factory clear.\n\nSpecialized tint removal, done right the first time.\nWindow Tint Removal — Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\n✅ 100% hand washed - never an automatic tunnel\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#CarCare #ModyCarWash #TintRemoval #ClearGlass #HandCarWash #PrinceGeorgesCounty #CarDetailing #DetailingLife #DMVCarWash #TintRepair #OxonHill",
-        "gbp": "Back to factory clear.\n\nSpecialized tint removal, done right the first time.\nWindow Tint Removal: Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\n100% hand washed - never an automatic tunnel.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+        "social": "Bubbling tint? We remove it clean.\n\nClear glass restored without damaging your rear defroster.\nWindow Tint Removal — Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\n✅ Ultra-filtered water, zero mineral spots\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#MarylandCarWash #ModyCarWash #CleanCar #AutoDetailing #CarWash #DetailingLife #PrinceGeorgesCounty #ClearGlass #TintRepair #CampSprings #TintRemoval",
+        "gbp": "Bubbling tint? We remove it clean.\n\nClear glass restored without damaging your rear defroster.\nWindow Tint Removal: Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\nUltra-filtered water, zero mineral spots.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
       }
     },
     {
@@ -1382,8 +1382,8 @@
       "localLabel": "2026-09-29 10:00 ET",
       "serviceId": "exterior",
       "layout": "scrim",
-      "comboId": "b047da",
-      "hash": "a8a6f25103f9cf4a",
+      "comboId": "3fbf9042",
+      "hash": "fd32b5a096ce889a",
       "attempts": 1,
       "images": {
         "feed": "posts/2026-09/day29-feed.jpg",
@@ -1431,9 +1431,9 @@
       "localLabel": "2026-09-30 10:00 ET",
       "serviceId": "interior",
       "layout": "glass",
-      "comboId": "8ca02f96",
-      "hash": "87949a6b4ee1e532",
-      "attempts": 1,
+      "comboId": "fd6210ba",
+      "hash": "87bcbca171547658",
+      "attempts": 3,
       "images": {
         "feed": "posts/2026-09/day30-feed.jpg",
         "square": "posts/2026-09/day30-gbp.jpg",
