@@ -73,23 +73,40 @@ export async function getScheduledByChannel(organizationId) {
   const ordered = postShape ? [variants.find(v => v.name === postShape), ...variants.filter(v => v.name !== postShape)] : variants;
 
   for (const v of ordered) {
-    const q = `query GetScheduled($input: PostsInput!) {
-        posts(input: $input) { edges { node { ${v.fields} } } }
+    const q = `query GetScheduled($input: PostsInput!, $first: Int, $after: String) {
+        posts(input: $input, first: $first, after: $after) {
+          pageInfo { hasNextPage endCursor }
+          edges { node { ${v.fields} } }
+        }
       }`;
-    const { data, errors } = await gql(q, {
-      input: { organizationId, filter: { status: ['scheduled'] }, sort: [{ field: 'dueAt', direction: 'asc' }] }
-    }, { throwOnError: false });
 
-    if (errors) continue;
-    postShape = v.name;
     const counts = new Map();
     const seen = [];
-    for (const edge of data?.posts?.edges ?? []) {
-      const cid = v.read(edge.node);
-      if (!cid) continue;
-      counts.set(cid, (counts.get(cid) ?? 0) + 1);
-      seen.push({ id: edge.node.id, channelId: cid, dueAt: edge.node.dueAt });
+    let after = null;
+    let failed = false;
+
+    // page until Buffer says there is nothing left, so the cap check is honest
+    for (let page = 0; page < 20; page++) {
+      const { data, errors } = await gql(q, {
+        input: { organizationId, filter: { status: ['scheduled'] }, sort: [{ field: 'dueAt', direction: 'asc' }] },
+        first: 100,
+        after
+      }, { throwOnError: false });
+
+      if (errors) { failed = true; break; }
+      for (const edge of data?.posts?.edges ?? []) {
+        const cid = v.read(edge.node);
+        if (!cid) continue;
+        counts.set(cid, (counts.get(cid) ?? 0) + 1);
+        seen.push({ id: edge.node.id, channelId: cid, dueAt: edge.node.dueAt });
+      }
+      const info = data?.posts?.pageInfo;
+      if (!info?.hasNextPage) break;
+      after = info.endCursor;
     }
+    if (failed) continue;
+
+    postShape = v.name;
     return { counts, posts: seen };
   }
   throw new Error('Could not read scheduled posts from Buffer (schema mismatch). Run: npm run doctor');
