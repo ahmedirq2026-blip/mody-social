@@ -31,43 +31,43 @@ export const LIGHTING = [
 ];
 
 export const ANGLES = [
-  'low three-quarter front angle, 35mm lens, shallow depth of field',
-  'tight close-up detail shot, 85mm macro lens, creamy bokeh',
-  'clean side profile, 50mm lens, centered composition',
-  'elevated three-quarter rear angle, 24mm lens, wide dramatic framing'
+  'tight close-up, 85mm macro lens, shallow depth of field',
+  'close detail crop, 100mm macro, creamy bokeh',
+  'partial three-quarter crop showing only a section of the body, 50mm',
+  'low close angle on a single panel, 35mm, dramatic but tightly framed'
 ];
 
 // What is physically happening in frame, per service.
 export const SERVICE_SCENES = {
   exterior: [
-    'gloved hands washing the door panel with a plush microfiber wash mitt, thick white foam sliding down the paint, water droplets suspended in the air',
-    'a hand rinsing thick foam off the hood with a pressure washer, clean water sheeting off flawless paint',
-    'a detailer hand-drying the roof with a large soft microfiber towel, mirror-like reflection in the paint',
-    'a close-up of a hand cleaning an alloy wheel with a soft brush, foam on the rim, tire glistening'
+    'extreme close-up of a plush microfiber wash mitt gliding across a wet painted door panel, thick white foam, water beads, no badges in frame',
+    'close crop of thick white foam sliding down a smooth painted body panel as clean water rinses it away, no emblems visible',
+    'close-up of a large soft microfiber towel hand-drying a curved painted panel, mirror-like reflection, cropped tight so no badge is visible',
+    'macro close-up of gloved hands cleaning an alloy wheel with a soft brush, foam on the rim, glistening tyre, blank plain wheel centre'
   ],
   interior: [
     'photographed from inside the car cabin: a detailer vacuuming a spotless fabric seat with a professional extractor nozzle, seats and centre console clearly visible',
-    'interior cabin view: gloved hands wiping the dashboard and air vents with a microfiber cloth, steering wheel and console in frame',
+    'interior cabin view: gloved hands wiping the dashboard and air vents with a microfiber cloth, plain unmarked steering wheel centre',
     'inside the footwell: clean floor carpets being brushed, fresh fibers, pedals and door sill visible',
     'the full car interior seen through the open front door: immaculate seats, polished trim, clean carpets, sunlight falling on the upholstery'
   ],
   tint: [
-    'hands carefully peeling dark old window film off the rear glass with a plastic blade, film curling away cleanly',
-    'a close-up of a squeegee removing adhesive residue from car glass, half the glass crystal clear, half still hazy',
-    'a detailer steaming old tint film off a side window, clean tools laid out nearby',
-    'crystal clear factory-fresh car glass after film removal, sharp reflections, no haze'
+    'close-up of hands peeling dark old window film off the rear glass with a plastic blade, film curling away cleanly, glass fills the frame',
+    'macro close-up of a squeegee removing adhesive residue from car glass, half the glass crystal clear, half still hazy',
+    'close crop of a detailer steaming old tint film off a side window, clean tools nearby, only glass and trim in frame',
+    'crystal clear factory-fresh car glass after film removal, tight crop on the glass, sharp reflections, no haze'
   ],
   combo: [
-    'a freshly washed car with the driver door open revealing an immaculate clean interior, water beading on the paint',
-    'a spotless car photographed after a full detail, gleaming paint and clean glossy tires, clean cabin visible through the windows',
-    'a detailer applying tire dressing to a clean glossy tire beside a freshly washed body panel',
-    'a fully cleaned car inside and out, doors open, mats out and spotless, professional presentation'
+    'close crop of a freshly washed painted panel beside an open door revealing an immaculate clean seat, water beading on the paint',
+    'tight three-quarter crop of a spotless car after a full detail: gleaming paint and clean glossy tyre, no badge in frame',
+    'close-up of a detailer applying tyre dressing to a clean glossy tyre beside a freshly washed painted panel',
+    'clean floor mats laid out drying next to a gleaming wet painted body panel, detailing tools in frame'
   ],
   super: [
-    'a gleaming car in a professional detailing studio with the hood open showing a spotless clean engine bay',
-    'steam rising from a steam cleaner being used on car upholstery, deep clean, professional equipment',
-    'a showroom-perfect car with deep mirror gloss paint and freshly blackened tires under studio lighting',
-    'water beading tightly into perfect spheres on a hydrophobic-treated windshield, macro detail'
+    'close-up of a spotless clean engine bay under an open bonnet, polished components, no manufacturer markings',
+    'steam rising from a steam cleaner being used on car upholstery, close crop, professional equipment',
+    'macro close-up of deep mirror gloss paint under studio lighting with a freshly blackened tyre at the edge of frame',
+    'macro shot of water beading into perfect spheres on a hydrophobic-treated windshield, glass fills the frame'
   ]
 };
 
@@ -79,7 +79,7 @@ export function buildImagePrompt(c) {
   return [
     'Clean unbranded commercial automotive photography with absolutely no text anywhere in the frame.',
     `${c.scene}.`,
-    `The vehicle is a ${c.color} ${c.vehicle} with smooth blank body panels, no emblem, no badge, no lettering, no license plate.`,
+    `The vehicle is a ${c.color} ${c.vehicle}. Frame it so that NO manufacturer emblem, badge, grille ornament, lettering or licence plate is anywhere in shot - show only smooth blank painted panels, glass, wheels or interior.`,
     `Location: ${c.setting}. Nothing in the background carries writing, signage or labels.`,
     `Lighting: ${c.lighting}.`,
     `Camera: ${c.angle}.`,
