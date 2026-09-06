@@ -29,7 +29,12 @@
     "142c1128": "2026-09",
     "f73819ee": "2026-09",
     "b047da": "2026-09",
-    "8ca02f96": "2026-09"
+    "8ca02f96": "2026-09",
+    "a253c952": "2026-09",
+    "df9d3378": "2026-09",
+    "7021fc36": "2026-09",
+    "b013818d": "2026-09",
+    "4303bad2": "2026-09"
   },
   "hashes": [
     {
@@ -151,6 +156,38 @@
     {
       "hash": "87949a6b4ee1e532",
       "ref": "2026-09/day30"
+    },
+    {
+      "hash": "be59814717697e09",
+      "ref": "2026-09/day07"
+    },
+    {
+      "hash": "fb8681291f5fe121",
+      "ref": "2026-09/day08"
+    },
+    {
+      "hash": "a57493530f8b363c",
+      "ref": "2026-09/day10"
+    },
+    {
+      "hash": "aa10126f6cc5af9e",
+      "ref": "2026-09/day11"
+    },
+    {
+      "hash": "be84904b35e7e2f0",
+      "ref": "2026-09/day12"
+    },
+    {
+      "hash": "c6c46e6ab8ae858d",
+      "ref": "2026-09/day21"
+    },
+    {
+      "hash": "f287c04f617d2bb0",
+      "ref": "2026-09/day25"
+    },
+    {
+      "hash": "f3813c2e03b9b8ae",
+      "ref": "2026-09/day28"
     }
   ],
   "headlines": {
@@ -160,12 +197,12 @@
     "Interior fresh. Exterior gleaming.": "2026-09-06T17:09:45.246Z",
     "Stains don’t stand a chance.": "2026-09-06T17:10:59.796Z",
     "Closed Sundays. Booked all week.": "2026-09-06T17:11:55.198Z",
-    "Water beads. Dirt slides off.": "2026-09-06T17:10:01.862Z",
+    "Water beads. Dirt slides off.": "2026-09-06T17:15:52.559Z",
     "Everything clean. Everything shining.": "2026-09-06T17:11:50.341Z",
     "Deep clean, inside out.": "2026-09-06T17:10:11.403Z",
     "Old film out. Clear glass in.": "2026-09-06T17:10:16.145Z",
-    "Steam clean. Odor gone.": "2026-09-06T17:10:20.828Z",
-    "Filtered water. Flawless finish.": "2026-09-06T17:10:25.526Z",
+    "Steam clean. Odor gone.": "2026-09-06T17:16:14.872Z",
+    "Filtered water. Flawless finish.": "2026-09-06T17:16:24.203Z",
     "Sunday reset. Monday shine.": "2026-09-06T17:10:30.977Z",
     "Every crumb. Every corner.": "2026-09-06T17:10:35.643Z",
     "No scratches. No sticky residue.": "2026-09-06T17:10:54.959Z",
@@ -177,6 +214,11 @@
     "The premium detail experience.": "2026-09-06T17:11:45.075Z",
     "Bubbling tint? We remove it clean.": "2026-09-06T17:12:03.739Z",
     "Zero scratches. Every single wash.": "2026-09-06T17:12:08.940Z",
-    "Dust-free dash, fresh carpets.": "2026-09-06T17:12:13.564Z"
+    "Dust-free dash, fresh carpets.": "2026-09-06T17:12:13.564Z",
+    "Your whole car, handled.": "2026-09-06T17:16:02.452Z",
+    "See clearly again.": "2026-09-06T17:16:07.740Z",
+    "That deep hand-finished gloss.": "2026-09-06T17:16:31.753Z",
+    "The Super Mody difference.": "2026-09-06T17:16:39.173Z",
+    "Back to factory clear.": "2026-09-06T17:16:44.255Z"
   }
 }
