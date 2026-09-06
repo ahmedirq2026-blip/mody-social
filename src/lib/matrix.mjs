@@ -59,12 +59,12 @@ export const SERVICE_SCENES = {
   ],
   combo: [
     'close crop of a freshly washed painted panel beside an open door revealing an immaculate clean seat, water beading on the paint',
-    'tight three-quarter crop of a spotless car after a full detail: gleaming paint and clean glossy tyre, no badge in frame',
+    'close crop of a gleaming wet painted door and sill after a full detail, clean glossy tyre at the edge of frame, no front or rear of the car visible',
     'close-up of a detailer applying tyre dressing to a clean glossy tyre beside a freshly washed painted panel',
     'clean floor mats laid out drying next to a gleaming wet painted body panel, detailing tools in frame'
   ],
   super: [
-    'close-up of a spotless clean engine bay under an open bonnet, polished components, no manufacturer markings',
+    'macro detail inside a spotless engine bay: clean hoses, polished covers and fittings filling the frame, no vehicle exterior visible',
     'steam rising from a steam cleaner being used on car upholstery, close crop, professional equipment',
     'macro close-up of deep mirror gloss paint under studio lighting with a freshly blackened tyre at the edge of frame',
     'macro shot of water beading into perfect spheres on a hydrophobic-treated windshield, glass fills the frame'
