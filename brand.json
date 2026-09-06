@@ -4,7 +4,7 @@
     "shortName": "Mody",
     "tagline": "Meticulous hand car wash & detailing",
     "website": "https://modycarwash.com",
-    "bookingUrl": "https://modycarwash.com/#book",
+    "bookingUrl": "https://modycarwash.com/book",
     "mapsUrl": "https://maps.app.goo.gl/KRNBHnG1AQCRgAgY8",
     "phone": "240-960-8365",
     "phoneDisplay": "(240) 960-8365",
@@ -13,7 +13,13 @@
     "state": "MD",
     "hours": "Mon-Sat 9AM-5PM",
     "closedDay": 0,
-    "areas": ["Temple Hills", "Camp Springs", "Oxon Hill", "Suitland", "Prince George's County"],
+    "areas": [
+      "Temple Hills",
+      "Camp Springs",
+      "Oxon Hill",
+      "Suitland",
+      "Prince George's County"
+    ],
     "payment": "No payment at booking - cash on arrival"
   },
   "palette": {
@@ -27,14 +33,43 @@
   },
   "font": {
     "family": "Manrope",
-    "weights": [500, 700, 800]
+    "weights": [
+      500,
+      700,
+      800
+    ]
   },
   "services": [
-    { "id": "exterior",   "name": "Mody Exterior",       "short": "Hand Wash",        "blurb": "Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out." },
-    { "id": "interior",   "name": "Mody Interior",       "short": "Interior Detail",  "blurb": "Deep vacuum for cabin and trunk, dashboard polish, carpet wash, steam stain removal." },
-    { "id": "tint",       "name": "Window Tint Removal", "short": "Tint Removal",     "blurb": "Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear." },
-    { "id": "combo",      "name": "Mody Combo",          "short": "Full Combo",       "blurb": "Complete interior and exterior in one visit, plus rim detailing and tire shine." },
-    { "id": "super",      "name": "Super Mody",          "short": "Showroom Detail",  "blurb": "Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening." }
+    {
+      "id": "exterior",
+      "name": "Mody Exterior",
+      "short": "Hand Wash",
+      "blurb": "Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out."
+    },
+    {
+      "id": "interior",
+      "name": "Mody Interior",
+      "short": "Interior Detail",
+      "blurb": "Deep vacuum for cabin and trunk, dashboard polish, carpet wash, steam stain removal."
+    },
+    {
+      "id": "tint",
+      "name": "Window Tint Removal",
+      "short": "Tint Removal",
+      "blurb": "Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear."
+    },
+    {
+      "id": "combo",
+      "name": "Mody Combo",
+      "short": "Full Combo",
+      "blurb": "Complete interior and exterior in one visit, plus rim detailing and tire shine."
+    },
+    {
+      "id": "super",
+      "name": "Super Mody",
+      "short": "Showroom Detail",
+      "blurb": "Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening."
+    }
   ],
   "proofPoints": [
     "100% hand washed - never an automatic tunnel",
@@ -47,6 +82,7 @@
   "rules": {
     "noTintInstallation": true,
     "noPricesInAds": true,
-    "gbpNoPhoneNumbers": true
+    "gbpNoPhoneNumbers": true,
+    "pricingPolicy": "Priced per vehicle based on size, condition and what the job needs. Never quote a number; prices are confirmed at booking or on arrival."
   }
 }
