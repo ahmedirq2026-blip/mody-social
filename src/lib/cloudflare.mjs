@@ -73,6 +73,8 @@ export async function generateImage(prompt, { steps = 4, retries = 7, variation 
       }
       return image;
     } catch (err) {
+      // never retry a spent daily allowance - retrying cannot make it come back
+      if (err instanceof DailyQuotaExhausted) throw err;
       lastErr = err;
       if (attempt === retries) break;
     }

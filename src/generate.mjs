@@ -192,7 +192,7 @@ if (quotaHit) {
 } else {
   console.log(`\nDone. ${results.length}/${total} posts ready in posts/${monthKey}/  (text guard: ${guardStatus()})`);
 }
-console.log(`Review them at posts/${monthKey}/index.html before the daily top-up starts.`);
+if (results.length) console.log(`Review them at posts/${monthKey}/index.html before the daily top-up starts.`);
 
 async function writeContactSheet(monthKey, plan) {
   const cards = plan.posts.map(p => `
