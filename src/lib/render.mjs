@@ -142,3 +142,24 @@ export function hammingDistance(a = '', b = '') {
   }
   return dist;
 }
+
+/**
+ * A small copy of the photo, for the vision guard only. Vision models bill by
+ * image tokens, so sending a 1024px JPEG to check for lettering cost about as
+ * much as generating the image. 448px is still ample to spot writing a viewer
+ * would read, and costs a fraction.
+ */
+export async function downscale(page, imageB64, maxDim = 448, quality = 70) {
+  await page.setContent('<body></body>');
+  return await page.evaluate(async ({ b64, maxDim, quality }) => {
+    const img = new Image();
+    img.src = 'data:image/jpeg;base64,' + b64;
+    await img.decode();
+    const scale = Math.min(1, maxDim / Math.max(img.width, img.height));
+    const c = document.createElement('canvas');
+    c.width = Math.round(img.width * scale);
+    c.height = Math.round(img.height * scale);
+    c.getContext('2d').drawImage(img, 0, 0, c.width, c.height);
+    return c.toDataURL('image/jpeg', quality / 100).split(',')[1];
+  }, { b64: imageB64, maxDim, quality });
+}

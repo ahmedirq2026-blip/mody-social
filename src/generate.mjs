@@ -5,9 +5,9 @@
 
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
-import { generateImage, DailyQuotaExhausted } from './lib/cloudflare.mjs';
+import { generateImage, DailyQuotaExhausted, chargeNeurons, neuronsUsed, budgetLeft, GUARD_NEURONS_ESTIMATE, BUDGET } from './lib/cloudflare.mjs';
 import { hasVisibleText, guardStatus } from './lib/guard.mjs';
-import { withBrowser, renderPost, photoHash, hammingDistance, SIZES } from './lib/render.mjs';
+import { withBrowser, renderPost, photoHash, hammingDistance, downscale, SIZES } from './lib/render.mjs';
 import { buildPost, serviceSequence } from './lib/compose.mjs';
 import { monthSlots, targetMonth } from './lib/schedule.mjs';
 import { mulberry32, hashString } from './lib/random.mjs';
@@ -97,11 +97,13 @@ const outDir = path.join(POSTS, monthKey);
 await mkdir(outDir, { recursive: true });
 
 let quotaHit = false;
+let budgetStop = false;
 const results = [...done.values()];
 const toRender = planned.filter(p => !done.has(p.day)).slice(0, limit);
 await withBrowser(async (page) => {
   for (const post of toRender) {
     if (quotaHit) break;
+    if (budgetLeft() < 200) { quotaHit = true; budgetStop = true; break; }
     const dayId = String(post.day).padStart(2, '0');
     let imageB64 = null, hash = null, attempts = 0;
 
@@ -116,7 +118,9 @@ await withBrowser(async (page) => {
       }
       const h = await photoHash(page, b64);
 
-      const text = await hasVisibleText(b64);
+      const small = await downscale(page, b64);
+      const text = await hasVisibleText(small);
+      if (text.checked) chargeNeurons(GUARD_NEURONS_ESTIMATE);
       if (text.checked && text.hasText && a < MAX_IMAGE_ATTEMPTS - 1) {
         console.log(`  day ${dayId}: the model rendered lettering into the photo, regenerating`);
         imageB64 = b64; hash = h;
@@ -186,9 +190,12 @@ await saveHistory(history);
 await writeContactSheet(monthKey, plan);
 
 const total = slots.length;
+console.log(`\nEstimated spend this run: ~${neuronsUsed()} neurons (budget ${BUDGET}, daily free allowance 10,000).`);
 if (quotaHit) {
-  console.log(`\nStopped early: ${results.length}/${total} posts done. ${DAILY_NOTE}`);
-  console.log('Everything rendered so far is saved. Run the workflow again and it resumes from here.');
+  console.log(budgetStop
+    ? `\nStopped at the budget: ${results.length}/${total} posts done.`
+    : `\nStopped early: ${results.length}/${total} posts done. ${DAILY_NOTE}`);
+  console.log('Everything rendered so far is saved. The next run resumes from here.');
 } else {
   console.log(`\nDone. ${results.length}/${total} posts ready in posts/${monthKey}/  (text guard: ${guardStatus()})`);
 }

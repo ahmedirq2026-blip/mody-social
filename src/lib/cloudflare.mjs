@@ -3,6 +3,27 @@
 
 const MODEL = '@cf/black-forest-labs/flux-1-schnell';
 
+// Cloudflare bills $0.000053 per 512px tile and $0.00011 per step, at
+// $0.011 per 1,000 neurons. A 1024x1024 image at 4 steps is therefore ~59
+// neurons. The vision guard is charged as image tokens, estimated separately.
+const NEURONS_PER_IMAGE = (steps) => ((4 * 0.000053 + steps * 0.00011) / 0.011) * 1000;
+export const GUARD_NEURONS_ESTIMATE = Number(process.env.GUARD_NEURONS || 12);
+
+let spent = 0;
+export const neuronsUsed = () => Math.round(spent);
+export const chargeNeurons = (n) => { spent += n; };
+
+/** Stop well before the 10,000 cap so a run never blows the day's allowance. */
+export const BUDGET = Number(process.env.NEURON_BUDGET || 8500);
+export const budgetLeft = () => BUDGET - spent;
+
+export class BudgetReached extends Error {
+  constructor() {
+    super(`Stopped at the self-imposed budget of ${BUDGET} neurons to protect the daily free allowance.`);
+    this.name = 'BudgetReached';
+  }
+}
+
 export class DailyQuotaExhausted extends Error {
   constructor() {
     super('Cloudflare daily free allocation (10,000 neurons) is used up. It resets at 00:00 UTC.');
@@ -71,6 +92,7 @@ export async function generateImage(prompt, { steps = 4, retries = 7, variation 
       if (!image || typeof image !== 'string') {
         throw new Error(`Unexpected Cloudflare response shape: ${JSON.stringify(json).slice(0, 300)}`);
       }
+      chargeNeurons(NEURONS_PER_IMAGE(steps));
       return image;
     } catch (err) {
       // never retry a spent daily allowance - retrying cannot make it come back

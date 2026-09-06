@@ -6,9 +6,9 @@
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
 import path from 'node:path';
 import { chromium } from 'playwright';
-import { generateImage, DailyQuotaExhausted } from './lib/cloudflare.mjs';
+import { generateImage, DailyQuotaExhausted, chargeNeurons, neuronsUsed, budgetLeft, GUARD_NEURONS_ESTIMATE, BUDGET } from './lib/cloudflare.mjs';
 import { hasVisibleText } from './lib/guard.mjs';
-import { photoHash, hammingDistance } from './lib/render.mjs';
+import { photoHash, hammingDistance, downscale } from './lib/render.mjs';
 import { renderReel, musicTracks, REEL } from './lib/video.mjs';
 import { buildPost, serviceSequence } from './lib/compose.mjs';
 import { monthSlots, targetMonth } from './lib/schedule.mjs';
@@ -78,11 +78,13 @@ const toRender = planned.filter(p => !done.has(p.day)).slice(0, limit);
 console.log(`Building ${toRender.length} reel(s) for ${baseKey} at ${REEL_HOUR}:00 America/New_York.`);
 
 let quotaHit = false;
+let budgetStop = false;
 const browser = await chromium.launch({ args: ['--font-render-hinting=none', '--force-color-profile=srgb'] });
 const page = await (await browser.newContext({ deviceScaleFactor: 1 })).newPage();
 
 for (const post of toRender) {
   if (quotaHit) break;
+  if (budgetLeft() < 200) { quotaHit = true; budgetStop = true; break; }
   const dayId = String(post.day).padStart(2, '0');
 
   let photoB64 = null, hash = null;
@@ -94,7 +96,9 @@ for (const post of toRender) {
     const h = await photoHash(page, b64);
     photoB64 = b64; hash = h;
 
-    const text = await hasVisibleText(b64);
+    const small = await downscale(page, b64);
+    const text = await hasVisibleText(small);
+    if (text.checked) chargeNeurons(GUARD_NEURONS_ESTIMATE);
     if (text.checked && text.hasText && a < MAX_IMAGE_ATTEMPTS - 1) {
       console.log(`  day ${dayId}: lettering in the photo, regenerating`);
       continue;
@@ -135,8 +139,11 @@ for (const post of toRender) {
 
 await browser.close();
 
+console.log(`\nEstimated spend this run: ~${neuronsUsed()} neurons (budget ${BUDGET}, daily free allowance 10,000).`);
 if (quotaHit) {
-  console.log(`\nStopped early: ${results.length}/${slots.length} reels done. The Cloudflare allowance resets at 00:00 UTC.`);
+  console.log(budgetStop
+    ? `\nStopped at the budget: ${results.length}/${slots.length} reels done.`
+    : `\nStopped early: ${results.length}/${slots.length} reels done. The Cloudflare allowance is spent.`);
   console.log('Everything rendered so far is saved; the next run resumes from here.');
 } else {
   console.log(`\nDone. ${results.length}/${slots.length} reels in posts/${planKey}/`);
