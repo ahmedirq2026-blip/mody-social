@@ -72,10 +72,20 @@ jobs:
           git add posts data
           if git diff --staged --quiet; then
             echo "Nothing new to commit."
-          else
-            git commit -m "content: generate posts for ${{ inputs.month || 'next month' }}"
-            git push
+            exit 0
           fi
+          git commit -m "content: generate posts for ${{ inputs.month || 'next month' }}"
+          for attempt in 1 2 3 4 5; do
+            if git push; then
+              echo "pushed on attempt $attempt"
+              exit 0
+            fi
+            echo "push rejected, rebasing onto origin/main (attempt $attempt)"
+            git pull --rebase --autostash origin main || exit 1
+            sleep $((attempt * 5))
+          done
+          echo "could not push after 5 attempts"
+          exit 1
 
       - name: Upload the review sheet
         if: always()
