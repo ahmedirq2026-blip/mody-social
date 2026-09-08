@@ -2,6 +2,1526 @@
   "month": "2026-10",
   "timezone": "America/New_York",
   "postTime": "10:00",
-  "generatedAt": "2026-09-08T16:41:29.882Z",
-  "posts": []
+  "generatedAt": "2026-09-08T21:15:52.752Z",
+  "posts": [
+    {
+      "day": 1,
+      "dueAt": "2026-10-01T14:00:00.000Z",
+      "localLabel": "2026-10-01 10:00 ET",
+      "serviceId": "super",
+      "layout": "panel",
+      "comboId": "5dbd18e3",
+      "hash": "bde08287d75e282d",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day01-feed.jpg",
+        "square": "posts/2026-10/day01-gbp.jpg",
+        "photo": "posts/2026-10/day01-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "PRINCE GEORGE’S COUNTY",
+        "kicker": "Temple Hills, MD",
+        "chip": "Mon–Sat 9–5",
+        "headline": [
+          "Engine bay",
+          "to tire shine."
+        ],
+        "sub": "The complete detail for people who care about their car.",
+        "cta": "Book Your Wash",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "panel"
+      },
+      "hashtags": [
+        "#HandCarWash",
+        "#CeramicLook",
+        "#CleanCar",
+        "#AutoDetailing",
+        "#CampSprings",
+        "#PGCounty",
+        "#ModyCarWash",
+        "#ShowroomShine",
+        "#CarDetailing",
+        "#TempleHillsMD",
+        "#EngineBayDetail"
+      ],
+      "captions": {
+        "social": "Engine bay to tire shine.\n\nThe complete detail for people who care about their car.\nSuper Mody — Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening.\n\n✅ Hydrophobic glass treatment\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#HandCarWash #CeramicLook #CleanCar #AutoDetailing #CampSprings #PGCounty #ModyCarWash #ShowroomShine #CarDetailing #TempleHillsMD #EngineBayDetail",
+        "gbp": "Engine bay to tire shine.\n\nThe complete detail for people who care about their car.\nSuper Mody: Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening.\n\nHydrophobic glass treatment.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 2,
+      "dueAt": "2026-10-02T14:00:00.000Z",
+      "localLabel": "2026-10-02 10:00 ET",
+      "serviceId": "interior",
+      "layout": "scrim",
+      "comboId": "d3d00345",
+      "hash": "95b6c6606b37185b",
+      "attempts": 3,
+      "images": {
+        "feed": "posts/2026-10/day02-feed.jpg",
+        "square": "posts/2026-10/day02-gbp.jpg",
+        "photo": "posts/2026-10/day02-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "TEMPLE HILLS, MD",
+        "kicker": "Temple Hills, MD",
+        "chip": "100% Hand Washed",
+        "headline": [
+          "Every crumb.",
+          "Every corner."
+        ],
+        "sub": "Interior detailing that resets your daily drive.",
+        "cta": "Book Your Wash",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "scrim"
+      },
+      "hashtags": [
+        "#DMVCarWash",
+        "#MarylandCarWash",
+        "#CarInterior",
+        "#ModyCarWash",
+        "#InteriorDetailing",
+        "#CleanCar",
+        "#FreshCabin",
+        "#CampSprings",
+        "#CarCare",
+        "#HandCarWash",
+        "#AutoDetailing"
+      ],
+      "captions": {
+        "social": "Every crumb. Every corner.\n\nInterior detailing that resets your daily drive.\nMody Interior — Deep vacuum for cabin and trunk, dashboard polish, carpet wash, steam stain removal.\n\n✅ 100% hand washed - never an automatic tunnel\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#DMVCarWash #MarylandCarWash #CarInterior #ModyCarWash #InteriorDetailing #CleanCar #FreshCabin #CampSprings #CarCare #HandCarWash #AutoDetailing",
+        "gbp": "Every crumb. Every corner.\n\nInterior detailing that resets your daily drive.\nMody Interior: Deep vacuum for cabin and trunk, dashboard polish, carpet wash, steam stain removal.\n\n100% hand washed - never an automatic tunnel.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 3,
+      "dueAt": "2026-10-03T14:00:00.000Z",
+      "localLabel": "2026-10-03 10:00 ET",
+      "serviceId": "exterior",
+      "layout": "glass",
+      "comboId": "92c0020",
+      "hash": "dd95362a68331772",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day03-feed.jpg",
+        "square": "posts/2026-10/day03-gbp.jpg",
+        "photo": "posts/2026-10/day03-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "PRINCE GEORGE’S COUNTY",
+        "kicker": "Temple Hills, MD",
+        "chip": "Zero Scratches",
+        "headline": [
+          "Zero scratches.",
+          "Every single wash."
+        ],
+        "sub": "Filtered water means no mineral spots when it dries.",
+        "cta": "Book Today",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "glass"
+      },
+      "hashtags": [
+        "#PGCounty",
+        "#Suitland",
+        "#ModyCarWash",
+        "#CarWashDay",
+        "#PaintCare",
+        "#CleanCar",
+        "#CarCare",
+        "#DetailingLife",
+        "#ShinyCar",
+        "#HandCarWash",
+        "#MarylandCarWash"
+      ],
+      "captions": {
+        "social": "Zero scratches. Every single wash.\n\nFiltered water means no mineral spots when it dries.\nMody Exterior — Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out.\n\n✅ Hydrophobic glass treatment\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#PGCounty #Suitland #ModyCarWash #CarWashDay #PaintCare #CleanCar #CarCare #DetailingLife #ShinyCar #HandCarWash #MarylandCarWash",
+        "gbp": "Zero scratches. Every single wash.\n\nFiltered water means no mineral spots when it dries.\nMody Exterior: Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out.\n\nHydrophobic glass treatment.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 4,
+      "dueAt": "2026-10-04T14:00:00.000Z",
+      "localLabel": "2026-10-04 10:00 ET",
+      "serviceId": "combo",
+      "layout": "panel",
+      "comboId": "e96702ce",
+      "hash": "d5919b0f2df46813",
+      "attempts": 2,
+      "images": {
+        "feed": "posts/2026-10/day04-feed.jpg",
+        "square": "posts/2026-10/day04-gbp.jpg",
+        "photo": "posts/2026-10/day04-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "HAND WASHED, ALWAYS",
+        "kicker": "Temple Hills, MD",
+        "chip": "100% Hand Washed",
+        "headline": [
+          "See you",
+          "tomorrow."
+        ],
+        "sub": "Closed Sundays. Every other day, your car gets the hand-wash treatment.",
+        "cta": "Plan Your Visit",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "panel"
+      },
+      "hashtags": [
+        "#InsideAndOut",
+        "#DetailingLife",
+        "#MarylandCarWash",
+        "#PGCounty",
+        "#FullDetail",
+        "#AutoDetailing",
+        "#DetailingService",
+        "#CarCare",
+        "#PrinceGeorgesCounty",
+        "#CleanCar",
+        "#ModyCarWash"
+      ],
+      "captions": {
+        "social": "See you tomorrow.\n\nClosed Sundays. Every other day, your car gets the hand-wash treatment.\n\n✅ 100% hand washed - never an automatic tunnel\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#InsideAndOut #DetailingLife #MarylandCarWash #PGCounty #FullDetail #AutoDetailing #DetailingService #CarCare #PrinceGeorgesCounty #CleanCar #ModyCarWash",
+        "gbp": "See you tomorrow.\n\nClosed Sundays. Every other day, your car gets the hand-wash treatment.\n\n100% hand washed - never an automatic tunnel.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 5,
+      "dueAt": "2026-10-05T14:00:00.000Z",
+      "localLabel": "2026-10-05 10:00 ET",
+      "serviceId": "tint",
+      "layout": "scrim",
+      "comboId": "99a11352",
+      "hash": "fffb3870f8c30024",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day05-feed.jpg",
+        "square": "posts/2026-10/day05-gbp.jpg",
+        "photo": "posts/2026-10/day05-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "HAND WASHED, ALWAYS",
+        "kicker": "Temple Hills, MD",
+        "chip": "Mon–Sat 9–5",
+        "headline": [
+          "Peeling tint",
+          "ruins a car."
+        ],
+        "sub": "Defroster lines protected during removal.",
+        "cta": "Drive In Today",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "scrim"
+      },
+      "hashtags": [
+        "#CarWash",
+        "#ModyCarWash",
+        "#DetailingLife",
+        "#CampSprings",
+        "#TintRemoval",
+        "#AutoGlass",
+        "#DMVCarWash",
+        "#TempleHillsMD",
+        "#ClearGlass",
+        "#HandCarWash",
+        "#CarDetailing"
+      ],
+      "captions": {
+        "social": "Peeling tint ruins a car.\n\nDefroster lines protected during removal.\nWindow Tint Removal — Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\n✅ Grit-guard buckets and soft microfiber\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#CarWash #ModyCarWash #DetailingLife #CampSprings #TintRemoval #AutoGlass #DMVCarWash #TempleHillsMD #ClearGlass #HandCarWash #CarDetailing",
+        "gbp": "Peeling tint ruins a car.\n\nDefroster lines protected during removal.\nWindow Tint Removal: Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\nGrit-guard buckets and soft microfiber.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 6,
+      "dueAt": "2026-10-06T14:00:00.000Z",
+      "localLabel": "2026-10-06 10:00 ET",
+      "serviceId": "super",
+      "layout": "glass",
+      "comboId": "1530d4d0",
+      "hash": "d9330c1edd832e71",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day06-feed.jpg",
+        "square": "posts/2026-10/day06-gbp.jpg",
+        "photo": "posts/2026-10/day06-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "NO TUNNELS. EVER.",
+        "kicker": "Temple Hills, MD",
+        "chip": "Eco & Paint-Safe",
+        "headline": [
+          "Detailed like",
+          "a dream car."
+        ],
+        "sub": "The complete detail for people who care about their car.",
+        "cta": "Book Your Wash",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "glass"
+      },
+      "hashtags": [
+        "#PremiumDetailing",
+        "#OxonHill",
+        "#ModyCarWash",
+        "#TempleHillsMD",
+        "#CarWash",
+        "#CleanCar",
+        "#ShowroomShine",
+        "#AutoDetailing",
+        "#PrinceGeorgesCounty",
+        "#CarCare",
+        "#CeramicLook"
+      ],
+      "captions": {
+        "social": "Detailed like a dream car.\n\nThe complete detail for people who care about their car.\nSuper Mody — Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening.\n\n✅ Ultra-filtered water, zero mineral spots\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#PremiumDetailing #OxonHill #ModyCarWash #TempleHillsMD #CarWash #CleanCar #ShowroomShine #AutoDetailing #PrinceGeorgesCounty #CarCare #CeramicLook",
+        "gbp": "Detailed like a dream car.\n\nThe complete detail for people who care about their car.\nSuper Mody: Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening.\n\nUltra-filtered water, zero mineral spots.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 7,
+      "dueAt": "2026-10-07T14:00:00.000Z",
+      "localLabel": "2026-10-07 10:00 ET",
+      "serviceId": "tint",
+      "layout": "panel",
+      "comboId": "bbf1e236",
+      "hash": "f788bb0220bf4e2d",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day07-feed.jpg",
+        "square": "posts/2026-10/day07-gbp.jpg",
+        "photo": "posts/2026-10/day07-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "TEMPLE HILLS, MD",
+        "kicker": "Temple Hills, MD",
+        "chip": "Ultra-Filtered Water",
+        "headline": [
+          "No scratches.",
+          "No sticky residue."
+        ],
+        "sub": "We remove old, bubbled and purple film safely.",
+        "cta": "Drive In Today",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "panel"
+      },
+      "hashtags": [
+        "#TempleHillsMD",
+        "#Suitland",
+        "#ClearGlass",
+        "#HandCarWash",
+        "#MarylandCarWash",
+        "#TintRepair",
+        "#AutoDetailing",
+        "#ModyCarWash",
+        "#DetailingLife",
+        "#AutoGlass",
+        "#CleanCar"
+      ],
+      "captions": {
+        "social": "No scratches. No sticky residue.\n\nWe remove old, bubbled and purple film safely.\nWindow Tint Removal — Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\n✅ Ultra-filtered water, zero mineral spots\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#TempleHillsMD #Suitland #ClearGlass #HandCarWash #MarylandCarWash #TintRepair #AutoDetailing #ModyCarWash #DetailingLife #AutoGlass #CleanCar",
+        "gbp": "No scratches. No sticky residue.\n\nWe remove old, bubbled and purple film safely.\nWindow Tint Removal: Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\nUltra-filtered water, zero mineral spots.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 8,
+      "dueAt": "2026-10-08T14:00:00.000Z",
+      "localLabel": "2026-10-08 10:00 ET",
+      "serviceId": "exterior",
+      "layout": "scrim",
+      "comboId": "cb8faf74",
+      "hash": "a0e2bb089073dbcf",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day08-feed.jpg",
+        "square": "posts/2026-10/day08-gbp.jpg",
+        "photo": "posts/2026-10/day08-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "HAND WASHED, ALWAYS",
+        "kicker": "Temple Hills, MD",
+        "chip": "Ultra-Filtered Water",
+        "headline": [
+          "Washed by hand.",
+          "Never by machine."
+        ],
+        "sub": "High-pressure rinse, hand dry, glass polish, rims in and out.",
+        "cta": "Reserve Your Spot",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "scrim"
+      },
+      "hashtags": [
+        "#PrinceGeorgesCounty",
+        "#CleanCar",
+        "#Suitland",
+        "#ExteriorDetailing",
+        "#ModyCarWash",
+        "#ScratchFree",
+        "#AutoDetailing",
+        "#CarWash",
+        "#CarWashDay",
+        "#MarylandCarWash",
+        "#CarCare"
+      ],
+      "captions": {
+        "social": "Washed by hand. Never by machine.\n\nHigh-pressure rinse, hand dry, glass polish, rims in and out.\nMody Exterior — Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out.\n\n✅ Eco-friendly, paint-safe, biodegradable\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#PrinceGeorgesCounty #CleanCar #Suitland #ExteriorDetailing #ModyCarWash #ScratchFree #AutoDetailing #CarWash #CarWashDay #MarylandCarWash #CarCare",
+        "gbp": "Washed by hand. Never by machine.\n\nHigh-pressure rinse, hand dry, glass polish, rims in and out.\nMody Exterior: Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out.\n\nEco-friendly, paint-safe, biodegradable.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 9,
+      "dueAt": "2026-10-09T14:00:00.000Z",
+      "localLabel": "2026-10-09 10:00 ET",
+      "serviceId": "combo",
+      "layout": "glass",
+      "comboId": "8fd1072c",
+      "hash": "b295ca4f5b81cb61",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day09-feed.jpg",
+        "square": "posts/2026-10/day09-gbp.jpg",
+        "photo": "posts/2026-10/day09-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "NO TUNNELS. EVER.",
+        "kicker": "Temple Hills, MD",
+        "chip": "Ultra-Filtered Water",
+        "headline": [
+          "Inside and out.",
+          "One visit."
+        ],
+        "sub": "Hand wash, hand dry, deep vacuum, dashboard polish — all of it.",
+        "cta": "Drive In Today",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "glass"
+      },
+      "hashtags": [
+        "#DetailingLife",
+        "#CampSprings",
+        "#CarWash",
+        "#FullDetail",
+        "#CarCare",
+        "#CarCleaning",
+        "#ModyCarWash",
+        "#DetailingService",
+        "#PrinceGeorgesCounty",
+        "#HandCarWash",
+        "#PGCounty"
+      ],
+      "captions": {
+        "social": "Inside and out. One visit.\n\nHand wash, hand dry, deep vacuum, dashboard polish — all of it.\nMody Combo — Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\n✅ 100% hand washed - never an automatic tunnel\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#DetailingLife #CampSprings #CarWash #FullDetail #CarCare #CarCleaning #ModyCarWash #DetailingService #PrinceGeorgesCounty #HandCarWash #PGCounty",
+        "gbp": "Inside and out. One visit.\n\nHand wash, hand dry, deep vacuum, dashboard polish — all of it.\nMody Combo: Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\n100% hand washed - never an automatic tunnel.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 10,
+      "dueAt": "2026-10-10T14:00:00.000Z",
+      "localLabel": "2026-10-10 10:00 ET",
+      "serviceId": "interior",
+      "layout": "panel",
+      "comboId": "49df3412",
+      "hash": "9b215e6f749493c8",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day10-feed.jpg",
+        "square": "posts/2026-10/day10-gbp.jpg",
+        "photo": "posts/2026-10/day10-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "HAND WASHED, ALWAYS",
+        "kicker": "Temple Hills, MD",
+        "chip": "500+ Weekly Shines",
+        "headline": [
+          "Kids, pets,",
+          "road trips — handled."
+        ],
+        "sub": "Floor mats washed, vents cleared, trim wiped down.",
+        "cta": "Come See Us",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "panel"
+      },
+      "hashtags": [
+        "#CarWash",
+        "#DMVCarWash",
+        "#FreshCabin",
+        "#CarDetailing",
+        "#ModyCarWash",
+        "#HandCarWash",
+        "#DeepClean",
+        "#TempleHillsMD",
+        "#AutoDetailing",
+        "#CarInterior",
+        "#MarylandCarWash"
+      ],
+      "captions": {
+        "social": "Kids, pets, road trips — handled.\n\nFloor mats washed, vents cleared, trim wiped down.\nMody Interior — Deep vacuum for cabin and trunk, dashboard polish, carpet wash, steam stain removal.\n\n✅ Hydrophobic glass treatment\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#CarWash #DMVCarWash #FreshCabin #CarDetailing #ModyCarWash #HandCarWash #DeepClean #TempleHillsMD #AutoDetailing #CarInterior #MarylandCarWash",
+        "gbp": "Kids, pets, road trips — handled.\n\nFloor mats washed, vents cleared, trim wiped down.\nMody Interior: Deep vacuum for cabin and trunk, dashboard polish, carpet wash, steam stain removal.\n\nHydrophobic glass treatment.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 11,
+      "dueAt": "2026-10-11T14:00:00.000Z",
+      "localLabel": "2026-10-11 10:00 ET",
+      "serviceId": "super",
+      "layout": "scrim",
+      "comboId": "8f2dd8cb",
+      "hash": "d3ccb087305f78a5",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day11-feed.jpg",
+        "square": "posts/2026-10/day11-gbp.jpg",
+        "photo": "posts/2026-10/day11-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "PRINCE GEORGE’S COUNTY",
+        "kicker": "Temple Hills, MD",
+        "chip": "Ultra-Filtered Water",
+        "headline": [
+          "Closed Sundays.",
+          "Booked all week."
+        ],
+        "sub": "We rest today so your car shines Monday through Saturday, 9 to 5.",
+        "cta": "Plan Your Visit",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "scrim"
+      },
+      "hashtags": [
+        "#ModyCarWash",
+        "#ShowroomShine",
+        "#CarDetailing",
+        "#CarCare",
+        "#DMVCarWash",
+        "#PGCounty",
+        "#HandCarWash",
+        "#EngineBayDetail",
+        "#AutoDetailing",
+        "#SteamClean",
+        "#CampSprings"
+      ],
+      "captions": {
+        "social": "Closed Sundays. Booked all week.\n\nWe rest today so your car shines Monday through Saturday, 9 to 5.\n\n✅ Ultra-filtered water, zero mineral spots\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#ModyCarWash #ShowroomShine #CarDetailing #CarCare #DMVCarWash #PGCounty #HandCarWash #EngineBayDetail #AutoDetailing #SteamClean #CampSprings",
+        "gbp": "Closed Sundays. Booked all week.\n\nWe rest today so your car shines Monday through Saturday, 9 to 5.\n\nUltra-filtered water, zero mineral spots.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 12,
+      "dueAt": "2026-10-12T14:00:00.000Z",
+      "localLabel": "2026-10-12 10:00 ET",
+      "serviceId": "exterior",
+      "layout": "glass",
+      "comboId": "13678042",
+      "hash": "bef2c84f85852794",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day12-feed.jpg",
+        "square": "posts/2026-10/day12-gbp.jpg",
+        "photo": "posts/2026-10/day12-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "100% BY HAND",
+        "kicker": "Temple Hills, MD",
+        "chip": "Zero Scratches",
+        "headline": [
+          "Tunnels scratch.",
+          "Hands don’t."
+        ],
+        "sub": "Soft microfiber, grit-guard buckets, ultra-filtered water.",
+        "cta": "Book Today",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "glass"
+      },
+      "hashtags": [
+        "#PaintCare",
+        "#TempleHillsMD",
+        "#ShinyCar",
+        "#CarWash",
+        "#AutoDetailing",
+        "#CarWashDay",
+        "#ModyCarWash",
+        "#CarCare",
+        "#Suitland",
+        "#CarDetailing",
+        "#PrinceGeorgesCounty"
+      ],
+      "captions": {
+        "social": "Tunnels scratch. Hands don’t.\n\nSoft microfiber, grit-guard buckets, ultra-filtered water.\nMody Exterior — Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out.\n\n✅ Eco-friendly, paint-safe, biodegradable\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#PaintCare #TempleHillsMD #ShinyCar #CarWash #AutoDetailing #CarWashDay #ModyCarWash #CarCare #Suitland #CarDetailing #PrinceGeorgesCounty",
+        "gbp": "Tunnels scratch. Hands don’t.\n\nSoft microfiber, grit-guard buckets, ultra-filtered water.\nMody Exterior: Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out.\n\nEco-friendly, paint-safe, biodegradable.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 13,
+      "dueAt": "2026-10-13T14:00:00.000Z",
+      "localLabel": "2026-10-13 10:00 ET",
+      "serviceId": "combo",
+      "layout": "panel",
+      "comboId": "9dc505f5",
+      "hash": "b1d15da66e6664c1",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day13-feed.jpg",
+        "square": "posts/2026-10/day13-gbp.jpg",
+        "photo": "posts/2026-10/day13-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "HAND WASHED, ALWAYS",
+        "kicker": "Temple Hills, MD",
+        "chip": "100% Hand Washed",
+        "headline": [
+          "Complete care,",
+          "start to finish."
+        ],
+        "sub": "Add precise rim detailing and tire shine to finish it off.",
+        "cta": "Reserve Your Spot",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "panel"
+      },
+      "hashtags": [
+        "#TempleHillsMD",
+        "#InsideAndOut",
+        "#CleanCar",
+        "#CarDetailing",
+        "#DetailingLife",
+        "#PrinceGeorgesCounty",
+        "#DetailingService",
+        "#Suitland",
+        "#ModyCarWash",
+        "#FullDetail",
+        "#HandCarWash"
+      ],
+      "captions": {
+        "social": "Complete care, start to finish.\n\nAdd precise rim detailing and tire shine to finish it off.\nMody Combo — Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\n✅ Grit-guard buckets and soft microfiber\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#TempleHillsMD #InsideAndOut #CleanCar #CarDetailing #DetailingLife #PrinceGeorgesCounty #DetailingService #Suitland #ModyCarWash #FullDetail #HandCarWash",
+        "gbp": "Complete care, start to finish.\n\nAdd precise rim detailing and tire shine to finish it off.\nMody Combo: Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\nGrit-guard buckets and soft microfiber.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 14,
+      "dueAt": "2026-10-14T14:00:00.000Z",
+      "localLabel": "2026-10-14 10:00 ET",
+      "serviceId": "interior",
+      "layout": "scrim",
+      "comboId": "86a4c9a6",
+      "hash": "8ec3e83d322687cd",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day14-feed.jpg",
+        "square": "posts/2026-10/day14-gbp.jpg",
+        "photo": "posts/2026-10/day14-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "NO TUNNELS. EVER.",
+        "kicker": "Temple Hills, MD",
+        "chip": "Eco & Paint-Safe",
+        "headline": [
+          "Your cabin,",
+          "brand new again."
+        ],
+        "sub": "Floor mats washed, vents cleared, trim wiped down.",
+        "cta": "Book Online",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "scrim"
+      },
+      "hashtags": [
+        "#InteriorDetailing",
+        "#DeepClean",
+        "#AutoDetailing",
+        "#OxonHill",
+        "#CarDetailing",
+        "#StainRemoval",
+        "#CarWash",
+        "#MarylandCarWash",
+        "#ModyCarWash",
+        "#DetailingLife",
+        "#DMVCarWash"
+      ],
+      "captions": {
+        "social": "Your cabin, brand new again.\n\nFloor mats washed, vents cleared, trim wiped down.\nMody Interior — Deep vacuum for cabin and trunk, dashboard polish, carpet wash, steam stain removal.\n\n✅ 500+ weekly shines\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#InteriorDetailing #DeepClean #AutoDetailing #OxonHill #CarDetailing #StainRemoval #CarWash #MarylandCarWash #ModyCarWash #DetailingLife #DMVCarWash",
+        "gbp": "Your cabin, brand new again.\n\nFloor mats washed, vents cleared, trim wiped down.\nMody Interior: Deep vacuum for cabin and trunk, dashboard polish, carpet wash, steam stain removal.\n\n500+ weekly shines.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 15,
+      "dueAt": "2026-10-15T14:00:00.000Z",
+      "localLabel": "2026-10-15 10:00 ET",
+      "serviceId": "tint",
+      "layout": "glass",
+      "comboId": "8f2a94f8",
+      "hash": "add41612f6eb160d",
+      "attempts": 3,
+      "images": {
+        "feed": "posts/2026-10/day15-feed.jpg",
+        "square": "posts/2026-10/day15-gbp.jpg",
+        "photo": "posts/2026-10/day15-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "TEMPLE HILLS, MD",
+        "kicker": "Temple Hills, MD",
+        "chip": "500+ Weekly Shines",
+        "headline": [
+          "Fix that",
+          "faded film."
+        ],
+        "sub": "Specialized tint removal, done right the first time.",
+        "cta": "Reserve Your Spot",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "glass"
+      },
+      "hashtags": [
+        "#HandCarWash",
+        "#DetailingLife",
+        "#ModyCarWash",
+        "#TempleHillsMD",
+        "#DMVCarWash",
+        "#WindowTint",
+        "#OxonHill",
+        "#CleanCar",
+        "#AutoGlass",
+        "#AutoDetailing",
+        "#ClearGlass"
+      ],
+      "captions": {
+        "social": "Fix that faded film.\n\nSpecialized tint removal, done right the first time.\nWindow Tint Removal — Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\n✅ Grit-guard buckets and soft microfiber\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#HandCarWash #DetailingLife #ModyCarWash #TempleHillsMD #DMVCarWash #WindowTint #OxonHill #CleanCar #AutoGlass #AutoDetailing #ClearGlass",
+        "gbp": "Fix that faded film.\n\nSpecialized tint removal, done right the first time.\nWindow Tint Removal: Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\nGrit-guard buckets and soft microfiber.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 16,
+      "dueAt": "2026-10-16T14:00:00.000Z",
+      "localLabel": "2026-10-16 10:00 ET",
+      "serviceId": "combo",
+      "layout": "panel",
+      "comboId": "561e462c",
+      "hash": "bf8f4eb3c024430f",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day16-feed.jpg",
+        "square": "posts/2026-10/day16-gbp.jpg",
+        "photo": "posts/2026-10/day16-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "TEMPLE HILLS, MD",
+        "kicker": "Temple Hills, MD",
+        "chip": "Zero Scratches",
+        "headline": [
+          "One stop.",
+          "Total transformation."
+        ],
+        "sub": "Add precise rim detailing and tire shine to finish it off.",
+        "cta": "Book Your Wash",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "panel"
+      },
+      "hashtags": [
+        "#Suitland",
+        "#CarDetail",
+        "#HandCarWash",
+        "#AutoDetailing",
+        "#TempleHillsMD",
+        "#CleanCar",
+        "#ModyCarWash",
+        "#CarDetailing",
+        "#FullDetail",
+        "#CarCleaning",
+        "#PrinceGeorgesCounty"
+      ],
+      "captions": {
+        "social": "One stop. Total transformation.\n\nAdd precise rim detailing and tire shine to finish it off.\nMody Combo — Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\n✅ Hydrophobic glass treatment\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#Suitland #CarDetail #HandCarWash #AutoDetailing #TempleHillsMD #CleanCar #ModyCarWash #CarDetailing #FullDetail #CarCleaning #PrinceGeorgesCounty",
+        "gbp": "One stop. Total transformation.\n\nAdd precise rim detailing and tire shine to finish it off.\nMody Combo: Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\nHydrophobic glass treatment.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 17,
+      "dueAt": "2026-10-17T14:00:00.000Z",
+      "localLabel": "2026-10-17 10:00 ET",
+      "serviceId": "tint",
+      "layout": "scrim",
+      "comboId": "8c215fac",
+      "hash": "f1f1d04f9cac2435",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day17-feed.jpg",
+        "square": "posts/2026-10/day17-gbp.jpg",
+        "photo": "posts/2026-10/day17-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "TEMPLE HILLS, MD",
+        "kicker": "Temple Hills, MD",
+        "chip": "500+ Weekly Shines",
+        "headline": [
+          "Purple film,",
+          "gone for good."
+        ],
+        "sub": "All adhesive residue fully cleaned. No haze, no sticky film.",
+        "cta": "Book Today",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "scrim"
+      },
+      "hashtags": [
+        "#TintRepair",
+        "#AutoDetailing",
+        "#Suitland",
+        "#CampSprings",
+        "#WindowTint",
+        "#OxonHill",
+        "#DetailingLife",
+        "#ModyCarWash",
+        "#HandCarWash",
+        "#CarWash",
+        "#ClearGlass"
+      ],
+      "captions": {
+        "social": "Purple film, gone for good.\n\nAll adhesive residue fully cleaned. No haze, no sticky film.\nWindow Tint Removal — Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\n✅ Grit-guard buckets and soft microfiber\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#TintRepair #AutoDetailing #Suitland #CampSprings #WindowTint #OxonHill #DetailingLife #ModyCarWash #HandCarWash #CarWash #ClearGlass",
+        "gbp": "Purple film, gone for good.\n\nAll adhesive residue fully cleaned. No haze, no sticky film.\nWindow Tint Removal: Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\nGrit-guard buckets and soft microfiber.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 18,
+      "dueAt": "2026-10-18T14:00:00.000Z",
+      "localLabel": "2026-10-18 10:00 ET",
+      "serviceId": "exterior",
+      "layout": "glass",
+      "comboId": "c5cf98f7",
+      "hash": "f8f4c1f08343875d",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day18-feed.jpg",
+        "square": "posts/2026-10/day18-gbp.jpg",
+        "photo": "posts/2026-10/day18-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "TEMPLE HILLS, MD",
+        "kicker": "Temple Hills, MD",
+        "chip": "Ultra-Filtered Water",
+        "headline": [
+          "See you",
+          "tomorrow."
+        ],
+        "sub": "Closed Sundays. Every other day, your car gets the hand-wash treatment.",
+        "cta": "Plan Your Visit",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "glass"
+      },
+      "hashtags": [
+        "#CampSprings",
+        "#CarWashDay",
+        "#Suitland",
+        "#DetailingLife",
+        "#CarWash",
+        "#ModyCarWash",
+        "#ShinyCar",
+        "#CarCare",
+        "#ScratchFree",
+        "#AutoDetailing",
+        "#PrinceGeorgesCounty"
+      ],
+      "captions": {
+        "social": "See you tomorrow.\n\nClosed Sundays. Every other day, your car gets the hand-wash treatment.\n\n✅ 100% hand washed - never an automatic tunnel\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#CampSprings #CarWashDay #Suitland #DetailingLife #CarWash #ModyCarWash #ShinyCar #CarCare #ScratchFree #AutoDetailing #PrinceGeorgesCounty",
+        "gbp": "See you tomorrow.\n\nClosed Sundays. Every other day, your car gets the hand-wash treatment.\n\n100% hand washed - never an automatic tunnel.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 19,
+      "dueAt": "2026-10-19T14:00:00.000Z",
+      "localLabel": "2026-10-19 10:00 ET",
+      "serviceId": "interior",
+      "layout": "panel",
+      "comboId": "abc77fce",
+      "hash": "8caeb5b0b0d8c8fa",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day19-feed.jpg",
+        "square": "posts/2026-10/day19-gbp.jpg",
+        "photo": "posts/2026-10/day19-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "PRINCE GEORGE’S COUNTY",
+        "kicker": "Temple Hills, MD",
+        "chip": "Zero Scratches",
+        "headline": [
+          "Spilled coffee?",
+          "We’ve got it."
+        ],
+        "sub": "Steam stain removal for upholstery and spills.",
+        "cta": "Drive In Today",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "panel"
+      },
+      "hashtags": [
+        "#ModyCarWash",
+        "#DMVCarWash",
+        "#CarCare",
+        "#CarDetailing",
+        "#CarInterior",
+        "#Suitland",
+        "#AutoDetailing",
+        "#CleanCar",
+        "#CampSprings",
+        "#FreshCabin",
+        "#StainRemoval"
+      ],
+      "captions": {
+        "social": "Spilled coffee? We’ve got it.\n\nSteam stain removal for upholstery and spills.\nMody Interior — Deep vacuum for cabin and trunk, dashboard polish, carpet wash, steam stain removal.\n\n✅ Grit-guard buckets and soft microfiber\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#ModyCarWash #DMVCarWash #CarCare #CarDetailing #CarInterior #Suitland #AutoDetailing #CleanCar #CampSprings #FreshCabin #StainRemoval",
+        "gbp": "Spilled coffee? We’ve got it.\n\nSteam stain removal for upholstery and spills.\nMody Interior: Deep vacuum for cabin and trunk, dashboard polish, carpet wash, steam stain removal.\n\nGrit-guard buckets and soft microfiber.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 20,
+      "dueAt": "2026-10-20T14:00:00.000Z",
+      "localLabel": "2026-10-20 10:00 ET",
+      "serviceId": "super",
+      "layout": "scrim",
+      "comboId": "3cfbabc7",
+      "hash": "aecc5d358b80ea63",
+      "attempts": 3,
+      "images": {
+        "feed": "posts/2026-10/day20-feed.jpg",
+        "square": "posts/2026-10/day20-gbp.jpg",
+        "photo": "posts/2026-10/day20-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "NO TUNNELS. EVER.",
+        "kicker": "Temple Hills, MD",
+        "chip": "100% Hand Washed",
+        "headline": [
+          "The Super Mody",
+          "difference."
+        ],
+        "sub": "The complete detail for people who care about their car.",
+        "cta": "Book Today",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "scrim"
+      },
+      "hashtags": [
+        "#CarWash",
+        "#CleanCar",
+        "#Suitland",
+        "#HandCarWash",
+        "#CeramicLook",
+        "#AutoDetailing",
+        "#ShowroomShine",
+        "#MarylandCarWash",
+        "#PremiumDetailing",
+        "#ModyCarWash",
+        "#PGCounty"
+      ],
+      "captions": {
+        "social": "The Super Mody difference.\n\nThe complete detail for people who care about their car.\nSuper Mody — Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening.\n\n✅ Ultra-filtered water, zero mineral spots\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#CarWash #CleanCar #Suitland #HandCarWash #CeramicLook #AutoDetailing #ShowroomShine #MarylandCarWash #PremiumDetailing #ModyCarWash #PGCounty",
+        "gbp": "The Super Mody difference.\n\nThe complete detail for people who care about their car.\nSuper Mody: Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening.\n\nUltra-filtered water, zero mineral spots.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 21,
+      "dueAt": "2026-10-21T14:00:00.000Z",
+      "localLabel": "2026-10-21 10:00 ET",
+      "serviceId": "interior",
+      "layout": "glass",
+      "comboId": "fd9ffb21",
+      "hash": "89753a42d538dce3",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day21-feed.jpg",
+        "square": "posts/2026-10/day21-gbp.jpg",
+        "photo": "posts/2026-10/day21-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "NO TUNNELS. EVER.",
+        "kicker": "Temple Hills, MD",
+        "chip": "500+ Weekly Shines",
+        "headline": [
+          "Dust-free dash,",
+          "fresh carpets."
+        ],
+        "sub": "Steam stain removal for upholstery and spills.",
+        "cta": "Book Today",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "glass"
+      },
+      "hashtags": [
+        "#CarDetailing",
+        "#CampSprings",
+        "#StainRemoval",
+        "#ModyCarWash",
+        "#DeepClean",
+        "#DMVCarWash",
+        "#AutoDetailing",
+        "#FreshCabin",
+        "#PGCounty",
+        "#HandCarWash",
+        "#CarWash"
+      ],
+      "captions": {
+        "social": "Dust-free dash, fresh carpets.\n\nSteam stain removal for upholstery and spills.\nMody Interior — Deep vacuum for cabin and trunk, dashboard polish, carpet wash, steam stain removal.\n\n✅ Ultra-filtered water, zero mineral spots\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#CarDetailing #CampSprings #StainRemoval #ModyCarWash #DeepClean #DMVCarWash #AutoDetailing #FreshCabin #PGCounty #HandCarWash #CarWash",
+        "gbp": "Dust-free dash, fresh carpets.\n\nSteam stain removal for upholstery and spills.\nMody Interior: Deep vacuum for cabin and trunk, dashboard polish, carpet wash, steam stain removal.\n\nUltra-filtered water, zero mineral spots.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 22,
+      "dueAt": "2026-10-22T14:00:00.000Z",
+      "localLabel": "2026-10-22 10:00 ET",
+      "serviceId": "super",
+      "layout": "panel",
+      "comboId": "a5830ce1",
+      "hash": "f3d21b9b0938bc26",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day22-feed.jpg",
+        "square": "posts/2026-10/day22-gbp.jpg",
+        "photo": "posts/2026-10/day22-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "HAND WASHED, ALWAYS",
+        "kicker": "Temple Hills, MD",
+        "chip": "Mon–Sat 9–5",
+        "headline": [
+          "Steam clean.",
+          "Odor gone."
+        ],
+        "sub": "Hydrophobic glass treatment that repels water and keeps vision clear.",
+        "cta": "Drive In Today",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "panel"
+      },
+      "hashtags": [
+        "#SteamClean",
+        "#AutoDetailing",
+        "#EngineBayDetail",
+        "#Suitland",
+        "#CarWash",
+        "#CarCare",
+        "#CeramicLook",
+        "#HandCarWash",
+        "#ModyCarWash",
+        "#PrinceGeorgesCounty",
+        "#MarylandCarWash"
+      ],
+      "captions": {
+        "social": "Steam clean. Odor gone.\n\nHydrophobic glass treatment that repels water and keeps vision clear.\nSuper Mody — Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening.\n\n✅ Grit-guard buckets and soft microfiber\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#SteamClean #AutoDetailing #EngineBayDetail #Suitland #CarWash #CarCare #CeramicLook #HandCarWash #ModyCarWash #PrinceGeorgesCounty #MarylandCarWash",
+        "gbp": "Steam clean. Odor gone.\n\nHydrophobic glass treatment that repels water and keeps vision clear.\nSuper Mody: Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening.\n\nGrit-guard buckets and soft microfiber.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 23,
+      "dueAt": "2026-10-23T14:00:00.000Z",
+      "localLabel": "2026-10-23 10:00 ET",
+      "serviceId": "exterior",
+      "layout": "scrim",
+      "comboId": "93274fc9",
+      "hash": "abd185285e1d9ecc",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day23-feed.jpg",
+        "square": "posts/2026-10/day23-gbp.jpg",
+        "photo": "posts/2026-10/day23-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "NO TUNNELS. EVER.",
+        "kicker": "Temple Hills, MD",
+        "chip": "500+ Weekly Shines",
+        "headline": [
+          "Soft mitt.",
+          "Sharp results."
+        ],
+        "sub": "Soft microfiber, grit-guard buckets, ultra-filtered water.",
+        "cta": "Book Your Wash",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "scrim"
+      },
+      "hashtags": [
+        "#CarWash",
+        "#CarDetailing",
+        "#CarWashDay",
+        "#ShinyCar",
+        "#ModyCarWash",
+        "#PGCounty",
+        "#PrinceGeorgesCounty",
+        "#ScratchFree",
+        "#AutoDetailing",
+        "#CarCare",
+        "#OxonHill"
+      ],
+      "captions": {
+        "social": "Soft mitt. Sharp results.\n\nSoft microfiber, grit-guard buckets, ultra-filtered water.\nMody Exterior — Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out.\n\n✅ Hydrophobic glass treatment\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#CarWash #CarDetailing #CarWashDay #ShinyCar #ModyCarWash #PGCounty #PrinceGeorgesCounty #ScratchFree #AutoDetailing #CarCare #OxonHill",
+        "gbp": "Soft mitt. Sharp results.\n\nSoft microfiber, grit-guard buckets, ultra-filtered water.\nMody Exterior: Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out.\n\nHydrophobic glass treatment.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 24,
+      "dueAt": "2026-10-24T14:00:00.000Z",
+      "localLabel": "2026-10-24 10:00 ET",
+      "serviceId": "combo",
+      "layout": "glass",
+      "comboId": "3c96eb7c",
+      "hash": "8bcb81cd9e469731",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day24-feed.jpg",
+        "square": "posts/2026-10/day24-gbp.jpg",
+        "photo": "posts/2026-10/day24-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "100% BY HAND",
+        "kicker": "Temple Hills, MD",
+        "chip": "Mon–Sat 9–5",
+        "headline": [
+          "The full",
+          "Mody treatment."
+        ],
+        "sub": "Hand wash, hand dry, deep vacuum, dashboard polish — all of it.",
+        "cta": "Book Your Wash",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "glass"
+      },
+      "hashtags": [
+        "#OxonHill",
+        "#HandCarWash",
+        "#AutoDetailing",
+        "#CarDetailing",
+        "#CarCare",
+        "#PGCounty",
+        "#CarCleaning",
+        "#CampSprings",
+        "#FullDetail",
+        "#ModyCarWash",
+        "#InsideAndOut"
+      ],
+      "captions": {
+        "social": "The full Mody treatment.\n\nHand wash, hand dry, deep vacuum, dashboard polish — all of it.\nMody Combo — Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\n✅ Ultra-filtered water, zero mineral spots\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#OxonHill #HandCarWash #AutoDetailing #CarDetailing #CarCare #PGCounty #CarCleaning #CampSprings #FullDetail #ModyCarWash #InsideAndOut",
+        "gbp": "The full Mody treatment.\n\nHand wash, hand dry, deep vacuum, dashboard polish — all of it.\nMody Combo: Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\nUltra-filtered water, zero mineral spots.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 25,
+      "dueAt": "2026-10-25T14:00:00.000Z",
+      "localLabel": "2026-10-25 10:00 ET",
+      "serviceId": "tint",
+      "layout": "panel",
+      "comboId": "5da8a0a5",
+      "hash": "eda08b8a32d2d277",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day25-feed.jpg",
+        "square": "posts/2026-10/day25-gbp.jpg",
+        "photo": "posts/2026-10/day25-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "NO TUNNELS. EVER.",
+        "kicker": "Temple Hills, MD",
+        "chip": "Ultra-Filtered Water",
+        "headline": [
+          "Sunday reset.",
+          "Monday shine."
+        ],
+        "sub": "Plan your week — we are open Monday through Saturday, 9AM to 5PM.",
+        "cta": "Plan Your Visit",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "panel"
+      },
+      "hashtags": [
+        "#ModyCarWash",
+        "#DetailingLife",
+        "#CarCare",
+        "#OxonHill",
+        "#CleanCar",
+        "#TintRemoval",
+        "#WindowTint",
+        "#CarWash",
+        "#PrinceGeorgesCounty",
+        "#DMVCarWash",
+        "#AutoGlass"
+      ],
+      "captions": {
+        "social": "Sunday reset. Monday shine.\n\nPlan your week — we are open Monday through Saturday, 9AM to 5PM.\n\n✅ Hydrophobic glass treatment\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#ModyCarWash #DetailingLife #CarCare #OxonHill #CleanCar #TintRemoval #WindowTint #CarWash #PrinceGeorgesCounty #DMVCarWash #AutoGlass",
+        "gbp": "Sunday reset. Monday shine.\n\nPlan your week — we are open Monday through Saturday, 9AM to 5PM.\n\nHydrophobic glass treatment.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 26,
+      "dueAt": "2026-10-26T14:00:00.000Z",
+      "localLabel": "2026-10-26 10:00 ET",
+      "serviceId": "combo",
+      "layout": "scrim",
+      "comboId": "2a92637f",
+      "hash": "ca96bbcaaae21545",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day26-feed.jpg",
+        "square": "posts/2026-10/day26-gbp.jpg",
+        "photo": "posts/2026-10/day26-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "ULTRA-FILTERED WATER",
+        "kicker": "Temple Hills, MD",
+        "chip": "Eco & Paint-Safe",
+        "headline": [
+          "Everything clean.",
+          "Everything shining."
+        ],
+        "sub": "One appointment. Inside and outside handled.",
+        "cta": "Reserve Your Spot",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "scrim"
+      },
+      "hashtags": [
+        "#ModyCarWash",
+        "#CarCleaning",
+        "#CarDetailing",
+        "#InsideAndOut",
+        "#DMVCarWash",
+        "#CampSprings",
+        "#CarWash",
+        "#TempleHillsMD",
+        "#HandCarWash",
+        "#FullDetail",
+        "#CleanCar"
+      ],
+      "captions": {
+        "social": "Everything clean. Everything shining.\n\nOne appointment. Inside and outside handled.\nMody Combo — Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\n✅ 100% hand washed - never an automatic tunnel\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#ModyCarWash #CarCleaning #CarDetailing #InsideAndOut #DMVCarWash #CampSprings #CarWash #TempleHillsMD #HandCarWash #FullDetail #CleanCar",
+        "gbp": "Everything clean. Everything shining.\n\nOne appointment. Inside and outside handled.\nMody Combo: Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\n100% hand washed - never an automatic tunnel.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 27,
+      "dueAt": "2026-10-27T14:00:00.000Z",
+      "localLabel": "2026-10-27 10:00 ET",
+      "serviceId": "interior",
+      "layout": "glass",
+      "comboId": "e38afdcf",
+      "hash": "aec55078a56e9371",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day27-feed.jpg",
+        "square": "posts/2026-10/day27-gbp.jpg",
+        "photo": "posts/2026-10/day27-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "100% BY HAND",
+        "kicker": "Temple Hills, MD",
+        "chip": "Ultra-Filtered Water",
+        "headline": [
+          "Dust-free dash,",
+          "fresh carpets."
+        ],
+        "sub": "Floor mats washed, vents cleared, trim wiped down.",
+        "cta": "Come See Us",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "glass"
+      },
+      "hashtags": [
+        "#HandCarWash",
+        "#ModyCarWash",
+        "#FreshCabin",
+        "#StainRemoval",
+        "#Suitland",
+        "#PGCounty",
+        "#CarInterior",
+        "#DetailingLife",
+        "#TempleHillsMD",
+        "#CarCare",
+        "#CleanCar"
+      ],
+      "captions": {
+        "social": "Dust-free dash, fresh carpets.\n\nFloor mats washed, vents cleared, trim wiped down.\nMody Interior — Deep vacuum for cabin and trunk, dashboard polish, carpet wash, steam stain removal.\n\n✅ Eco-friendly, paint-safe, biodegradable\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#HandCarWash #ModyCarWash #FreshCabin #StainRemoval #Suitland #PGCounty #CarInterior #DetailingLife #TempleHillsMD #CarCare #CleanCar",
+        "gbp": "Dust-free dash, fresh carpets.\n\nFloor mats washed, vents cleared, trim wiped down.\nMody Interior: Deep vacuum for cabin and trunk, dashboard polish, carpet wash, steam stain removal.\n\nEco-friendly, paint-safe, biodegradable.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 28,
+      "dueAt": "2026-10-28T14:00:00.000Z",
+      "localLabel": "2026-10-28 10:00 ET",
+      "serviceId": "tint",
+      "layout": "panel",
+      "comboId": "1fb4a66f",
+      "hash": "ede0ea711686451f",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day28-feed.jpg",
+        "square": "posts/2026-10/day28-gbp.jpg",
+        "photo": "posts/2026-10/day28-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "HAND WASHED, ALWAYS",
+        "kicker": "Temple Hills, MD",
+        "chip": "100% Hand Washed",
+        "headline": [
+          "Old film out.",
+          "Clear glass in."
+        ],
+        "sub": "Specialized tint removal, done right the first time.",
+        "cta": "Book Your Wash",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "panel"
+      },
+      "hashtags": [
+        "#HandCarWash",
+        "#TintRepair",
+        "#WindowTint",
+        "#CarWash",
+        "#CarDetailing",
+        "#AutoGlass",
+        "#ModyCarWash",
+        "#DMVCarWash",
+        "#DetailingLife",
+        "#Suitland",
+        "#CampSprings"
+      ],
+      "captions": {
+        "social": "Old film out. Clear glass in.\n\nSpecialized tint removal, done right the first time.\nWindow Tint Removal — Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\n✅ 500+ weekly shines\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#HandCarWash #TintRepair #WindowTint #CarWash #CarDetailing #AutoGlass #ModyCarWash #DMVCarWash #DetailingLife #Suitland #CampSprings",
+        "gbp": "Old film out. Clear glass in.\n\nSpecialized tint removal, done right the first time.\nWindow Tint Removal: Scratch-free removal with precise tools, all adhesive residue cleaned, glass back to factory clear.\n\n500+ weekly shines.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 29,
+      "dueAt": "2026-10-29T14:00:00.000Z",
+      "localLabel": "2026-10-29 10:00 ET",
+      "serviceId": "super",
+      "layout": "scrim",
+      "comboId": "876245b",
+      "hash": "fe3ab060eb1b806e",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day29-feed.jpg",
+        "square": "posts/2026-10/day29-gbp.jpg",
+        "photo": "posts/2026-10/day29-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "100% BY HAND",
+        "kicker": "Temple Hills, MD",
+        "chip": "Eco & Paint-Safe",
+        "headline": [
+          "Perfection,",
+          "by hand."
+        ],
+        "sub": "Hydrophobic glass treatment that repels water and keeps vision clear.",
+        "cta": "Come See Us",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "scrim"
+      },
+      "hashtags": [
+        "#PremiumDetailing",
+        "#DetailingLife",
+        "#HandCarWash",
+        "#CarDetailing",
+        "#Suitland",
+        "#PGCounty",
+        "#MarylandCarWash",
+        "#ModyCarWash",
+        "#EngineBayDetail",
+        "#ShowroomShine",
+        "#AutoDetailing"
+      ],
+      "captions": {
+        "social": "Perfection, by hand.\n\nHydrophobic glass treatment that repels water and keeps vision clear.\nSuper Mody — Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening.\n\n✅ Hydrophobic glass treatment\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#PremiumDetailing #DetailingLife #HandCarWash #CarDetailing #Suitland #PGCounty #MarylandCarWash #ModyCarWash #EngineBayDetail #ShowroomShine #AutoDetailing",
+        "gbp": "Perfection, by hand.\n\nHydrophobic glass treatment that repels water and keeps vision clear.\nSuper Mody: Engine bay cleaning, steam clean, stain and odor removal, hydrophobic glass, upholstery perfume, tire blackening.\n\nHydrophobic glass treatment.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 30,
+      "dueAt": "2026-10-30T14:00:00.000Z",
+      "localLabel": "2026-10-30 10:00 ET",
+      "serviceId": "exterior",
+      "layout": "glass",
+      "comboId": "ac9c2275",
+      "hash": "8036bf333e1c25ce",
+      "attempts": 2,
+      "images": {
+        "feed": "posts/2026-10/day30-feed.jpg",
+        "square": "posts/2026-10/day30-gbp.jpg",
+        "photo": "posts/2026-10/day30-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "TEMPLE HILLS, MD",
+        "kicker": "Temple Hills, MD",
+        "chip": "500+ Weekly Shines",
+        "headline": [
+          "Filtered water.",
+          "Flawless finish."
+        ],
+        "sub": "High-pressure rinse, hand dry, glass polish, rims in and out.",
+        "cta": "Reserve Your Spot",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "glass"
+      },
+      "hashtags": [
+        "#MarylandCarWash",
+        "#PaintCare",
+        "#DetailingLife",
+        "#HandCarWash",
+        "#ScratchFree",
+        "#PrinceGeorgesCounty",
+        "#CleanCar",
+        "#ExteriorDetailing",
+        "#CampSprings",
+        "#CarWash",
+        "#ModyCarWash"
+      ],
+      "captions": {
+        "social": "Filtered water. Flawless finish.\n\nHigh-pressure rinse, hand dry, glass polish, rims in and out.\nMody Exterior — Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out.\n\n✅ Grit-guard buckets and soft microfiber\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#MarylandCarWash #PaintCare #DetailingLife #HandCarWash #ScratchFree #PrinceGeorgesCounty #CleanCar #ExteriorDetailing #CampSprings #CarWash #ModyCarWash",
+        "gbp": "Filtered water. Flawless finish.\n\nHigh-pressure rinse, hand dry, glass polish, rims in and out.\nMody Exterior: Safe cleaners, high-pressure rinse, scratch-free hand dry, glass polish, rims in and out.\n\nGrit-guard buckets and soft microfiber.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    },
+    {
+      "day": 31,
+      "dueAt": "2026-10-31T14:00:00.000Z",
+      "localLabel": "2026-10-31 10:00 ET",
+      "serviceId": "combo",
+      "layout": "panel",
+      "comboId": "fb97e904",
+      "hash": "e3e3062fe18119fa",
+      "attempts": 1,
+      "images": {
+        "feed": "posts/2026-10/day31-feed.jpg",
+        "square": "posts/2026-10/day31-gbp.jpg",
+        "photo": "posts/2026-10/day31-photo.jpg"
+      },
+      "copy": {
+        "eyebrow": "TEMPLE HILLS, MD",
+        "kicker": "Temple Hills, MD",
+        "chip": "100% Hand Washed",
+        "headline": [
+          "Full clean.",
+          "Real difference."
+        ],
+        "sub": "Hand wash, hand dry, deep vacuum, dashboard polish — all of it.",
+        "cta": "Book Today",
+        "footer": [
+          "4533 St Barnabas Rd",
+          "Mon–Sat 9–5",
+          "modycarwash.com"
+        ],
+        "layout": "panel"
+      },
+      "hashtags": [
+        "#HandCarWash",
+        "#ModyCarWash",
+        "#CleanCar",
+        "#TempleHillsMD",
+        "#CarDetail",
+        "#CarDetailing",
+        "#DMVCarWash",
+        "#CarWash",
+        "#CarCleaning",
+        "#PrinceGeorgesCounty",
+        "#InsideAndOut"
+      ],
+      "captions": {
+        "social": "Full clean. Real difference.\n\nHand wash, hand dry, deep vacuum, dashboard polish — all of it.\nMody Combo — Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\n✅ 100% hand washed - never an automatic tunnel\n\n📍 4533 Saint Barnabas Rd, Temple Hills, MD 20748\n🕘 Mon-Sat 9AM-5PM · Closed Sundays\n📞 (240) 960-8365\n🔗 https://modycarwash.com\n\n#HandCarWash #ModyCarWash #CleanCar #TempleHillsMD #CarDetail #CarDetailing #DMVCarWash #CarWash #CarCleaning #PrinceGeorgesCounty #InsideAndOut",
+        "gbp": "Full clean. Real difference.\n\nHand wash, hand dry, deep vacuum, dashboard polish — all of it.\nMody Combo: Complete interior and exterior in one visit, plus rim detailing and tire shine.\n\n100% hand washed - never an automatic tunnel.\nVisit us at 4533 Saint Barnabas Rd, Temple Hills, MD 20748. Open Mon-Sat 9AM-5PM, closed Sundays.\nServing Temple Hills, Camp Springs, Oxon Hill, Suitland."
+      }
+    }
+  ]
 }
