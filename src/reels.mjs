@@ -19,6 +19,10 @@ const REEL_HOUR = Number(process.env.REEL_HOUR || 20);   // 8:00 PM America/New_
 const HASH_MIN_DISTANCE = 12;
 const MAX_IMAGE_ATTEMPTS = 3;
 const PACE_MS = Number(process.env.PACE_MS || 2500);
+// Reels reuse the raw photos the image pipeline already generated. Set
+// REEL_FRESH_PHOTOS=1 to spend neurons on new ones instead.
+const REUSE_PHOTOS = process.env.REEL_FRESH_PHOTOS !== '1';
+const PHOTO_OFFSET = Number(process.env.REEL_PHOTO_OFFSET || 14);
 
 const force = process.argv.includes('--force');
 const limitArg = process.argv.find(a => a.startsWith('--limit='));
@@ -68,6 +72,23 @@ const sequence = serviceSequence(rng, slots.length, brand.services.map(s => s.id
 const planned = slots.map((slot, i) =>
   buildPost({ monthKey: planKey, slot, index: i, serviceId: sequence[i], brand, salt: 'reel' }));
 
+// map each reel day to a photo from a distant day of the same month
+const imagePlan = await loadPlan(baseKey);
+const photoByDay = new Map((imagePlan?.posts ?? [])
+  .filter(p => p.images?.photo)
+  .map(p => [p.day, p.images.photo]));
+
+function reusablePhoto(day) {
+  if (!REUSE_PHOTOS || !photoByDay.size) return null;
+  const days = [...photoByDay.keys()].sort((a, b) => a - b);
+  const wanted = ((day - 1 + PHOTO_OFFSET) % days.length);
+  for (let i = 0; i < days.length; i++) {
+    const candidate = days[(wanted + i) % days.length];
+    if (candidate !== day) return photoByDay.get(candidate);
+  }
+  return null;
+}
+
 const outDir = path.join(POSTS, planKey);
 const work = path.join(ROOT, '.tmp-reel');
 await mkdir(outDir, { recursive: true });
@@ -76,6 +97,9 @@ await mkdir(work, { recursive: true });
 const results = [...done.values()];
 const toRender = planned.filter(p => !done.has(p.day)).slice(0, limit);
 console.log(`Building ${toRender.length} reel(s) for ${baseKey} at ${REEL_HOUR}:00 America/New_York.`);
+console.log(REUSE_PHOTOS && photoByDay.size
+  ? `Reusing ${photoByDay.size} existing photos - no image generation needed.`
+  : 'Generating fresh photos for each reel.');
 
 let quotaHit = false;
 let budgetStop = false;
@@ -88,7 +112,18 @@ for (const post of toRender) {
   const dayId = String(post.day).padStart(2, '0');
 
   let photoB64 = null, hash = null;
-  for (let a = 0; a < MAX_IMAGE_ATTEMPTS; a++) {
+
+  const reuse = reusablePhoto(post.day);
+  if (reuse) {
+    try {
+      photoB64 = (await readFile(path.join(ROOT, reuse))).toString('base64');
+      hash = await photoHash(page, photoB64);
+    } catch {
+      photoB64 = null;
+    }
+  }
+
+  for (let a = 0; photoB64 === null && a < MAX_IMAGE_ATTEMPTS; a++) {
     let b64;
     try { b64 = await generateImage(post.prompt, { variation: a }); }
     catch (err) { if (err instanceof DailyQuotaExhausted) { quotaHit = true; break; } throw err; }

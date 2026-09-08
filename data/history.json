@@ -80,7 +80,9 @@
     "12edb6d": "2026-09-reels",
     "5517679f": "2026-09-reels",
     "f66ea2cc": "2026-09-reels",
-    "f542b053": "2026-09-reels"
+    "f542b053": "2026-09-reels",
+    "bda472a0": "2026-09-reels",
+    "911d3c4b": "2026-09-reels"
   },
   "hashes": [
     {
@@ -434,6 +436,14 @@
     {
       "hash": "9aca92eac2e549f2",
       "ref": "2026-09-reels/day08"
+    },
+    {
+      "hash": "f1f0f16869a948b3",
+      "ref": "2026-09-reels/day09"
+    },
+    {
+      "hash": "94846f303d6e88df",
+      "ref": "2026-09-reels/day10"
     }
   ],
   "headlines": {
@@ -470,6 +480,8 @@
     "See you tomorrow.": "2026-09-07T18:17:07.186Z",
     "Resting today. Shining tomorrow.": "2026-09-07T18:17:18.086Z",
     "The combo everyone books.": "2026-09-07T18:41:27.802Z",
-    "Soft mitt. Sharp results.": "2026-09-07T18:42:07.205Z"
+    "Soft mitt. Sharp results.": "2026-09-07T18:42:07.205Z",
+    "A cabin that smells new.": "2026-09-08T13:19:58.582Z",
+    "Fix that faded film.": "2026-09-08T13:20:21.135Z"
   }
 }
