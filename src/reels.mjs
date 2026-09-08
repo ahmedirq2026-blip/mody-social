@@ -167,6 +167,9 @@ for (const post of toRender) {
     generatedAt: new Date().toISOString(), posts: results
   });
   await saveHistory(history);
+  await writeReelSheet(planKey, {
+    month: baseKey, postTime: `${String(REEL_HOUR).padStart(2, '0')}:00`, posts: results
+  });
 
   console.log(`  ${post.localLabel}  ${post.serviceId.padEnd(9)} "${post.copy.headline.join(' ')}"  ${track.slice(0, 24)}`);
   await new Promise(r => setTimeout(r, PACE_MS));
@@ -182,4 +185,41 @@ if (quotaHit) {
   console.log('Everything rendered so far is saved; the next run resumes from here.');
 } else {
   console.log(`\nDone. ${results.length}/${slots.length} reels in posts/${planKey}/`);
+}
+
+/** A page to watch the month's reels, mirroring the image review sheet. */
+async function writeReelSheet(planKey, plan) {
+  const cards = plan.posts.map(p => {
+    const id = String(p.day).padStart(2, '0');
+    const caption = (p.captions?.social ?? '').replace(/[<&]/g, c => (c === '<' ? '&lt;' : '&amp;'));
+    return `
+    <figure>
+      <video controls preload="metadata" playsinline src="day${id}.mp4"></video>
+      <figcaption>
+        <b>${p.localLabel}</b> · ${p.serviceId}
+        <p>${p.copy.headline.join(' ')}</p>
+        <small>${(p.track ?? '').replace(/\.mp3$/, '')}</small>
+        <details><summary>caption</summary><pre>${caption}</pre></details>
+      </figcaption>
+    </figure>`;
+  }).join('');
+
+  const html = `<meta charset="utf-8"><title>Mody ${planKey} reels</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+ body{font:14px/1.5 system-ui,sans-serif;background:#0b1218;color:#e6eef5;margin:0;padding:32px}
+ h1{font-size:22px;margin:0 0 4px} .sub{color:#8fa6b8;margin-bottom:24px}
+ .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:20px}
+ figure{margin:0;background:#111c25;border:1px solid #1e2c38;border-radius:14px;overflow:hidden}
+ video{width:100%;display:block;background:#000;aspect-ratio:9/16}
+ figcaption{padding:12px 14px;font-size:12px;color:#9fb4c6}
+ figcaption b{color:#00ccf9} figcaption p{color:#fff;font-size:14px;margin:6px 0}
+ small{color:#6d8497;font-size:11px}
+ pre{white-space:pre-wrap;font-size:11px;color:#8fa6b8;background:#0b1218;padding:10px;border-radius:8px}
+</style>
+<h1>Mody Car Wash — reels — ${plan.month}</h1>
+<div class="sub">${plan.posts.length} reels · ${plan.postTime} America/New_York · 1080×1920 · 10s</div>
+<div class="grid">${cards}</div>`;
+
+  await writeFile(path.join(POSTS, planKey, 'index.html'), html);
 }
