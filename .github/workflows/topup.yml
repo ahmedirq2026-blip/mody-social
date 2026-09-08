@@ -4,7 +4,9 @@ name: Daily Buffer Top-Up
 # free-plan cap of 10 queued posts per channel.
 on:
   schedule:
-    - cron: '17 11 * * *'     # 06:17 ET (winter) / 07:17 ET (summer)
+    # every three hours: with two posts a day, a once-daily run cannot refill a
+    # slot that frees at 10:00 before the 20:00 reel needs to be queued
+    - cron: '17 */3 * * *'
   workflow_dispatch:
 
 permissions:
