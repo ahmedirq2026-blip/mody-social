@@ -44,7 +44,7 @@ function metadataFor(kind, isReel = false) {
   };
 }
 
-const TARGET_QUEUE = Number(process.env.TARGET_QUEUE || 7);
+const TARGET_QUEUE = Number(process.env.TARGET_QUEUE || 9);
 const HARD_CAP = Number(process.env.QUEUE_HARD_CAP || 10);
 const LEAD_MINUTES = 20;                       // never schedule something almost due
 const dry = process.argv.includes('--dry-run');
@@ -98,16 +98,20 @@ for (const channel of wanted) {
   if (room <= 0) { console.log(`${log} — full, nothing to add`); continue; }
 
   const done = posted[channel.id] ?? {};
-  const todo = queue.filter(p => !done[`${p.monthKey}#${p.day}`]).slice(0, room);
+  // Google Business Profile takes no video, so a reel landing in its slice used
+  // to be skipped inside the loop and the slot went unused. Filter first.
+  const eligible = queue.filter(p => {
+    if (done[`${p.monthKey}#${p.day}`]) return false;
+    if (p.kind === 'reel' && channel.kind === 'google') return false;
+    return true;
+  });
+  const todo = eligible.slice(0, room);
   if (!todo.length) { console.log(`${log} — no unposted plan entries left`); continue; }
   console.log(`${log} — adding ${todo.length}`);
 
   for (const p of todo) {
     const isGoogle = channel.kind === 'google';
     const isReel = p.kind === 'reel';
-
-    // Google Business Profile does not accept video through Buffer
-    if (isReel && isGoogle) continue;
 
     const rel = isReel ? p.video : (isGoogle ? p.images.square : p.images.feed);
     const url = imageUrl(rel);
