@@ -4,6 +4,7 @@
     "13678042": "2026-10",
     "19348113": "2026-09",
     "79923330": "2026-09",
+    "93299004": "2026-11",
     "46b18c5f": "2026-09",
     "915116e2": "2026-09",
     "9f1a218a": "2026-09",
@@ -164,7 +165,36 @@
     "bc2907b0": "2026-10-reels",
     "37e81383": "2026-10-reels",
     "6da4b059": "2026-10-reels",
-    "72c501e3": "2026-10-reels"
+    "72c501e3": "2026-10-reels",
+    "6cbe3f1f": "2026-11",
+    "b1045ac1": "2026-11",
+    "ed0c9ec5": "2026-11",
+    "d36747ed": "2026-11",
+    "f926cb5": "2026-11",
+    "f5a309b0": "2026-11",
+    "6c74f175": "2026-11",
+    "9c103999": "2026-11",
+    "7ad0af61": "2026-11",
+    "32a4e2fa": "2026-11",
+    "46c48d8": "2026-11",
+    "8bb7fdd6": "2026-11",
+    "b72f11fc": "2026-11",
+    "6415155b": "2026-11",
+    "fb5d1d32": "2026-11",
+    "10d719a0": "2026-11",
+    "e3e168fc": "2026-11",
+    "d077608": "2026-11",
+    "334160bc": "2026-11",
+    "f6b09ce8": "2026-11",
+    "11de60a": "2026-11",
+    "c9c7cb80": "2026-11",
+    "9dcb927b": "2026-11",
+    "d76feb14": "2026-11",
+    "92a33dd8": "2026-11",
+    "890e8fd6": "2026-11",
+    "c3cf2330": "2026-11",
+    "fca50a5b": "2026-11",
+    "91bb5328": "2026-11"
   },
   "hashes": [
     {
@@ -854,59 +884,181 @@
     {
       "hash": "8ec3e83d322687cd",
       "ref": "2026-10-reels/day31"
+    },
+    {
+      "hash": "caaae4b89434d5d9",
+      "ref": "2026-11/day01"
+    },
+    {
+      "hash": "ead0d7bb142e2b18",
+      "ref": "2026-11/day02"
+    },
+    {
+      "hash": "86cc33673eab0a27",
+      "ref": "2026-11/day03"
+    },
+    {
+      "hash": "d78f9ab521c1470e",
+      "ref": "2026-11/day04"
+    },
+    {
+      "hash": "94fa9d37ecc05219",
+      "ref": "2026-11/day05"
+    },
+    {
+      "hash": "fcd0830b17b43da3",
+      "ref": "2026-11/day06"
+    },
+    {
+      "hash": "adc99276cc39c836",
+      "ref": "2026-11/day07"
+    },
+    {
+      "hash": "fbc4c4139cead238",
+      "ref": "2026-11/day08"
+    },
+    {
+      "hash": "f8070f68f208dfaa",
+      "ref": "2026-11/day09"
+    },
+    {
+      "hash": "c6a2492c72593f6b",
+      "ref": "2026-11/day10"
+    },
+    {
+      "hash": "ceb0e9e3e4896c23",
+      "ref": "2026-11/day11"
+    },
+    {
+      "hash": "ffa894a142562e1f",
+      "ref": "2026-11/day12"
+    },
+    {
+      "hash": "d23aba7282c47b93",
+      "ref": "2026-11/day13"
+    },
+    {
+      "hash": "d2e5a41ae8a49ad7",
+      "ref": "2026-11/day14"
+    },
+    {
+      "hash": "de96b4fc8cc9811c",
+      "ref": "2026-11/day15"
+    },
+    {
+      "hash": "c4c3dcf7092cf452",
+      "ref": "2026-11/day16"
+    },
+    {
+      "hash": "cdb70688985c3cfc",
+      "ref": "2026-11/day17"
+    },
+    {
+      "hash": "c00f0fe7e1997961",
+      "ref": "2026-11/day18"
+    },
+    {
+      "hash": "b41acc6cdf23e126",
+      "ref": "2026-11/day19"
+    },
+    {
+      "hash": "e969a420068fbf6e",
+      "ref": "2026-11/day20"
+    },
+    {
+      "hash": "a9bd96d3cad6010d",
+      "ref": "2026-11/day21"
+    },
+    {
+      "hash": "8ac215bc6c1fde64",
+      "ref": "2026-11/day22"
+    },
+    {
+      "hash": "9c8f93c963619c66",
+      "ref": "2026-11/day23"
+    },
+    {
+      "hash": "a36a54c677e818da",
+      "ref": "2026-11/day24"
+    },
+    {
+      "hash": "a86c9f23e33b4899",
+      "ref": "2026-11/day25"
+    },
+    {
+      "hash": "a188d3733135b4bd",
+      "ref": "2026-11/day26"
+    },
+    {
+      "hash": "a98d8dcd96965253",
+      "ref": "2026-11/day27"
+    },
+    {
+      "hash": "84678795e0a3de4b",
+      "ref": "2026-11/day28"
+    },
+    {
+      "hash": "bca8afa15394d694",
+      "ref": "2026-11/day29"
+    },
+    {
+      "hash": "9dd1c31e0ee970e2",
+      "ref": "2026-11/day30"
     }
   ],
   "headlines": {
-    "Our very best work.": "2026-09-07T18:37:33.034Z",
+    "Our very best work.": "2026-10-01T00:36:16.517Z",
     "Precision tint removal.": "2026-09-08T21:36:29.989Z",
-    "Washed by hand. Never by machine.": "2026-09-08T21:13:42.963Z",
+    "Washed by hand. Never by machine.": "2026-10-01T00:35:31.876Z",
     "Interior fresh. Exterior gleaming.": "2026-09-08T21:37:33.141Z",
     "Stains don’t stand a chance.": "2026-09-06T17:21:35.374Z",
-    "Closed Sundays. Booked all week.": "2026-09-08T21:33:19.068Z",
+    "Closed Sundays. Booked all week.": "2026-10-01T00:38:27.862Z",
     "Water beads. Dirt slides off.": "2026-09-08T13:25:43.216Z",
     "Everything clean. Everything shining.": "2026-09-08T21:15:23.091Z",
-    "Deep clean, inside out.": "2026-09-08T21:30:39.640Z",
-    "Old film out. Clear glass in.": "2026-09-08T21:31:41.702Z",
+    "Deep clean, inside out.": "2026-10-01T00:36:09.370Z",
+    "Old film out. Clear glass in.": "2026-10-01T00:37:43.596Z",
     "Steam clean. Odor gone.": "2026-09-08T21:38:37.374Z",
     "Filtered water. Flawless finish.": "2026-09-08T21:15:45.349Z",
     "Sunday reset. Monday shine.": "2026-09-08T21:15:18.527Z",
     "Every crumb. Every corner.": "2026-09-08T21:39:42.816Z",
     "No scratches. No sticky residue.": "2026-09-08T21:13:38.264Z",
-    "Complete care, start to finish.": "2026-09-08T21:29:03.703Z",
+    "Complete care, start to finish.": "2026-10-01T00:35:50.125Z",
     "Your paint deserves better.": "2026-09-08T21:34:22.240Z",
     "Purple film, gone for good.": "2026-09-08T21:14:33.427Z",
     "The full Mody treatment.": "2026-09-08T21:15:13.094Z",
     "Your cabin, brand new again.": "2026-09-08T21:14:13.762Z",
     "The premium detail experience.": "2026-09-08T21:30:08.496Z",
-    "Bubbling tint? We remove it clean.": "2026-09-07T18:38:47.980Z",
-    "Zero scratches. Every single wash.": "2026-09-08T21:38:04.717Z",
-    "Dust-free dash, fresh carpets.": "2026-09-08T21:15:28.941Z",
+    "Bubbling tint? We remove it clean.": "2026-10-01T00:36:36.132Z",
+    "Zero scratches. Every single wash.": "2026-10-01T00:35:55.584Z",
+    "Dust-free dash, fresh carpets.": "2026-10-01T00:38:17.080Z",
     "Your whole car, handled.": "2026-09-08T21:41:16.502Z",
     "See clearly again.": "2026-09-06T17:16:07.740Z",
-    "That deep hand-finished gloss.": "2026-09-08T13:25:00.792Z",
+    "That deep hand-finished gloss.": "2026-10-01T00:36:23.850Z",
     "The Super Mody difference.": "2026-09-08T21:42:20.703Z",
     "Back to factory clear.": "2026-09-08T13:21:28.557Z",
     "Full clean. Real difference.": "2026-09-08T21:15:50.224Z",
-    "See you tomorrow.": "2026-09-08T21:40:46.895Z",
-    "Resting today. Shining tomorrow.": "2026-09-08T13:26:46.274Z",
-    "The combo everyone books.": "2026-09-08T21:34:53.865Z",
+    "See you tomorrow.": "2026-10-01T00:37:38.580Z",
+    "Resting today. Shining tomorrow.": "2026-10-01T00:36:03.943Z",
+    "The combo everyone books.": "2026-10-01T00:37:10.882Z",
     "Soft mitt. Sharp results.": "2026-09-08T21:15:07.976Z",
     "A cabin that smells new.": "2026-09-08T13:26:25.311Z",
-    "Fix that faded film.": "2026-09-08T21:28:32.361Z",
-    "Perfection, by hand.": "2026-09-08T21:15:38.676Z",
-    "Engine bay to tire shine.": "2026-09-08T21:13:00.684Z",
-    "Clean glass, zero haze.": "2026-09-08T21:42:54.495Z",
-    "Look like you just drove it home.": "2026-09-08T21:39:09.574Z",
+    "Fix that faded film.": "2026-10-01T00:35:44.434Z",
+    "Perfection, by hand.": "2026-10-01T00:37:19.281Z",
+    "Engine bay to tire shine.": "2026-10-01T00:37:56.073Z",
+    "Clean glass, zero haze.": "2026-10-01T00:36:59.881Z",
+    "Look like you just drove it home.": "2026-10-01T00:37:05.366Z",
     "Peeling tint ruins a car.": "2026-09-08T21:33:49.903Z",
-    "Detailed like a dream car.": "2026-09-08T21:13:33.633Z",
-    "Inside and out. One visit.": "2026-09-08T21:13:48.620Z",
+    "Detailed like a dream car.": "2026-10-01T00:36:31.310Z",
+    "Inside and out. One visit.": "2026-10-01T00:37:33.011Z",
     "Kids, pets, road trips — handled.": "2026-09-08T21:13:53.347Z",
     "Tunnels scratch. Hands don’t.": "2026-09-08T21:43:26.665Z",
-    "One stop. Total transformation.": "2026-09-08T21:14:27.977Z",
-    "Spilled coffee? We’ve got it.": "2026-09-08T21:41:49.086Z",
-    "Breathe easier on every drive.": "2026-09-08T21:28:00.508Z",
-    "Treat it like it’s new.": "2026-09-08T21:35:26.723Z",
+    "One stop. Total transformation.": "2026-10-01T00:38:06.845Z",
+    "Spilled coffee? We’ve got it.": "2026-10-01T00:36:44.999Z",
+    "Breathe easier on every drive.": "2026-10-01T00:37:27.449Z",
+    "Treat it like it’s new.": "2026-10-01T00:38:38.039Z",
     "Vacuumed deep. Wiped clean.": "2026-09-08T21:35:59.708Z",
-    "Wash, detail, shine — done.": "2026-09-08T21:43:59.752Z"
+    "Wash, detail, shine — done.": "2026-09-08T21:43:59.752Z",
+    "Spot-free shine, guaranteed.": "2026-10-01T00:38:01.381Z",
+    "Grit stays off your paint.": "2026-10-01T00:38:11.912Z"
   }
 }
